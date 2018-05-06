@@ -69,21 +69,13 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="locations" data-live-search="true" data-live-search-placeholder="Search value" >
+                                <select class="selectpicker search-fields" name="bedrooms" data-live-search="true" data-live-search-placeholder="Search value" >
                                     <option>Locality</option>
-                                    <option>Johar Town</option>
+                                    <option>johar town</option>
                                     <option>Allama Iqbal Town</option>
-									                  <option>Bahria Town</option>
-									                  <option>Wapda Town</option>
-									                  <option>Model Town</option>
-                                    <option>Samanabad</option>
-                                    <option>Sabzazar Scheme</option>
-                                    <option>Gulberg</option>
-                                    <option>Paragon City</option>
-                                    <option>Harbanspura</option>
-                                    <option>Cavalry Ground</option>
-                                    <option>Township</option>
-
+									<option>Bahria Town</option>
+									<option>Wapda Town</option>
+									<option>Model Town</option>
                                 </select>
                             </div>
                         </div>
@@ -91,8 +83,8 @@
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="mytextbox" data-live-search="true" data-live-search-placeholder="Search value" >
                                     <option>Type</option>
-                                    <option>Buy</option>
-									                  <option>Rent</option>
+                                    <option>0</option>
+									                  <option>1</option>
 
                                 </select>
                             </div>
@@ -137,12 +129,11 @@
             <h1><span>Results</span></h1>
         </div>
 
-
+        <ul>
                             {% if  house_records %}
                                 {% for k,v in house_records.items  %}
 
                                     {% for i,j in v.items %}
-
                                 <div class="col-md-1"></div>
                                 <div class="col-md-11">
 
@@ -163,18 +154,14 @@
                                         {% if i == "price" %}
                                           <h3><b>price : {{ j }}</b></h3>
                                         {% endif %}
-
-
-                                    </div>
-
-
+</div>
                                     {% endfor %}
 
                                 {% endfor %}
                         {% endif %}
 
 
-
+        </ul>
 
     </div>
 </div>
@@ -205,6 +192,8 @@
                     <h4> Buy Houses</h4>
                     <p>
 
+                         The well furnished Houses and the best thing for you is here
+                          so come and join us and find your desired property
                     </p>
                 </div>
             </div>
@@ -214,6 +203,8 @@
                     <h4>plots</h4>
                     <p>
 
+                         The awesome plots and the best thing for you is here
+                          so come and join us and find your desired property
                     </p>
                 </div>
             </div>
@@ -223,6 +214,8 @@
                     <h4>Rent House</h4>
                     <p>
 
+                         The well furnished Houses for rent and the best thing for you is here
+                          so come and join us and find your desired property
                     </p>
                 </div>
             </div>
@@ -346,34 +339,7 @@
                                             <a href="tel:+554XX-634-7071"><i class="fa fa-phone"></i>+92 335 4342 184</a>
                                         </p>
                                     </div>
-                                    <!-- Social list -->
-                                    <ul class="social-list clearfix">
-                                        <li>
-                                            <a href="#" class="facebook">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="twitter">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="linkedin">
-                                                <i class="fa fa-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="google">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="rss">
-                                                <i class="fa fa-rss"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+
                                 </div>
                             </div>
                             <!-- Agent box end -->
@@ -394,42 +360,15 @@
                                         <a href="agent-single.html">M SHAHAN IZHAR</a>
                                     </h1>
                                     <!-- Contact -->
+
                                     <div class="contact">
                                         <p>
-                                            <a href=""><i class="fa fa-envelope-o"></i></a>
+                                            <a href=""><i class="fa fa-envelope-o"></i> bcsf14m532@pucit.edu.pk</a>
                                         </p>
                                         <p>
-                                            <a href="tel:+554XX-634-7071"><i class="fa fa-phone"></i>+92 3XX XXXX XXX</a>
+                                            <a href="tel:+554XX-634-7071"><i class="fa fa-phone"></i>+92 335 4342 184</a>
                                         </p>
                                     </div>
-                                    <!-- Sociallist -->
-                                    <ul class="social-list clearfix">
-                                        <li>
-                                            <a href="#" class="facebook">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="twitter">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="linkedin">
-                                                <i class="fa fa-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="google">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="rss">
-                                                <i class="fa fa-rss"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                             <!-- Agent box end -->
@@ -450,42 +389,15 @@
                                         <a href="agent-single.html">H MUHAMMAD TALHA</a>
                                     </h1>
                                     <!-- Contact -->
+
                                     <div class="contact">
                                         <p>
-                                            <a href="mailto:info@themevessel.com"><i class="fa fa-envelope-o"></i>info@gmail.com</a>
+                                            <a href=""><i class="fa fa-envelope-o"></i> bcsf14m556@pucit.edu.pk</a>
                                         </p>
                                         <p>
-                                            <a href="tel:+554XX-634-7071"><i class="fa fa-phone"></i>+92 3XX XXXX XXX</a>
+                                            <a href="tel:+554XX-634-7071"><i class="fa fa-phone"></i>+92 335 4342 184</a>
                                         </p>
                                     </div>
-                                    <!-- Sociallist -->
-                                    <ul class="social-list clearfix">
-                                        <li>
-                                            <a href="#" class="facebook">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="twitter">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="linkedin">
-                                                <i class="fa fa-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="google">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="rss">
-                                                <i class="fa fa-rss"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                             <!-- Agent box enx -->
@@ -506,42 +418,15 @@
                                         <a href="agent-single.html">SANA ANWER</a>
                                     </h1>
                                     <!-- Contact -->
+
                                     <div class="contact">
                                         <p>
-                                            <a href=""><i class="fa fa-envelope-o"></i>info@gmail.com</a>
+                                            <a href=""><i class="fa fa-envelope-o"></i> bsef14m528@pucit.edu.pk</a>
                                         </p>
                                         <p>
-                                            <a href="tel:+554XX-634-7071"><i class="fa fa-phone"></i>+92 3XX XXXX XXX</a>
+                                            <a href="tel:+554XX-634-7071"><i class="fa fa-phone"></i>+92 335 4342 184</a>
                                         </p>
                                     </div>
-                                    <!-- Sociallist -->
-                                    <ul class="social-list clearfix">
-                                        <li>
-                                            <a href="#" class="facebook">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="twitter">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="linkedin">
-                                                <i class="fa fa-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="google">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="rss">
-                                                <i class="fa fa-rss"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                             <!-- Agent bos end -->
@@ -612,133 +497,6 @@
                                         </div>
                                     </div>
                                 </div>
-                               <!-- <div class="item content clearfix">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                            <div class="avatar">
-                                                <img src="img/avatar/avatar-2.jpg" alt="avatar-2" class="img-responsive">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                            <div class="testimonials-info">
-                                                <div class="text">
-                                                    <sup>
-                                                        <i class="fa fa-quote-left"></i>
-                                                    </sup>
-                                                    Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.
-                                                    <sub>
-                                                        <i class="fa fa-quote-right"></i>
-                                                    </sub>
-                                                </div>
-                                                <div class="author-name">
-                                                    John Mery
-                                                </div>
-                                                <ul class="rating">
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star-half-full"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item content clearfix">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                            <div class="avatar">
-                                                <img src="img/avatar/avatar-4.jpg" alt="avatar-4" class="img-responsive">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                            <div class="testimonials-info">
-                                                <div class="text">
-                                                    <sup>
-                                                        <i class="fa fa-quote-left"></i>
-                                                    </sup>
-                                                    Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.
-                                                    <sub>
-                                                        <i class="fa fa-quote-right"></i>
-                                                    </sub>
-                                                </div>
-                                                <div class="author-name">
-                                                    John Top
-                                                </div>
-                                                <ul class="rating">
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star-half-full"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item content clearfix">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                            <div class="avatar">
-                                                <img src="img/avatar/avatar-3.jpg" alt="avatar-3" class="img-responsive">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 ">
-                                            <div class="testimonials-info">
-                                                <div class="text">
-                                                    <sup>
-                                                        <i class="fa fa-quote-left"></i>
-                                                    </sup>
-                                                    Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.
-                                                    <sup>
-                                                        <i class="fa fa-quote-right"></i>
-                                                    </sup>
-
-                                                </div>
-                                                <div class="author-name">
-                                                    John Pitarshon
-                                                </div>
-                                                <ul class="rating">
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-star-half-full"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
                             </div>
                             <!-- Controls -->
                             <a class="left carousel-control" href="#carouse3-example-generic" role="button" data-slide="prev">
