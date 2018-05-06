@@ -1,0 +1,542 @@
+{
+    "DHA Defence": {
+        "id": "9",
+        "link": "https://beta.zameen.com/Homes/Lahore_DHA_Defence-9-1.html"
+    },
+    "Bahria Town": {
+        "id": "509",
+        "link": "https://beta.zameen.com/Homes/Lahore_Bahria_Town-509-1.html"
+    },
+    "Johar Town": {
+        "id": "93",
+        "link": "https://beta.zameen.com/Homes/Lahore_Johar_Town-93-1.html"
+    },
+    "Askari": {
+        "id": "3555",
+        "link": "https://beta.zameen.com/Homes/Lahore_Askari-3555-1.html"
+    },
+    "Wapda Town": {
+        "id": "423",
+        "link": "https://beta.zameen.com/Homes/Lahore_Wapda_Town-423-1.html"
+    },
+    "State Life Housing Society": {
+        "id": "487",
+        "link": "https://beta.zameen.com/Homes/Lahore_State_Life_Housing_Society-487-1.html"
+    },
+    "Allama Iqbal Town": {
+        "id": "58",
+        "link": "https://beta.zameen.com/Homes/Lahore_Allama_Iqbal_Town-58-1.html"
+    },
+    "Paragon City": {
+        "id": "1014",
+        "link": "https://beta.zameen.com/Homes/Lahore_Paragon_City-1014-1.html"
+    },
+    "Model Town": {
+        "id": "8",
+        "link": "https://beta.zameen.com/Homes/Lahore_Model_Town-8-1.html"
+    },
+    "Eden": {
+        "id": "3098",
+        "link": "https://beta.zameen.com/Homes/Lahore_Eden-3098-1.html"
+    },
+    "Cantt": {
+        "id": "427",
+        "link": "https://beta.zameen.com/Homes/Lahore_Cantt-427-1.html"
+    },
+    "Gulberg": {
+        "id": "7",
+        "link": "https://beta.zameen.com/Homes/Lahore_Gulberg-7-1.html"
+    },
+    "Pak Arab Housing Society": {
+        "id": "1006",
+        "link": "https://beta.zameen.com/Homes/Lahore_Pak_Arab_Housing_Society-1006-1.html"
+    },
+    "Sabzazar Scheme": {
+        "id": "562",
+        "link": "https://beta.zameen.com/Homes/Lahore_Sabzazar_Scheme-562-1.html"
+    },
+    "Valencia Housing Society": {
+        "id": "373",
+        "link": "https://beta.zameen.com/Homes/Lahore_Valencia_Housing_Society-373-1.html"
+    },
+    "Samanabad": {
+        "id": "377",
+        "link": "https://beta.zameen.com/Homes/Lahore_Samanabad-377-1.html"
+    },
+    "Al Rehman Garden": {
+        "id": "4504",
+        "link": "https://beta.zameen.com/Homes/Lahore_Al_Rehman_Garden-4504-1.html"
+    },
+    "Garden Town": {
+        "id": "4",
+        "link": "https://beta.zameen.com/Homes/Lahore_Garden_Town-4-1.html"
+    },
+    "EME Society": {
+        "id": "410",
+        "link": "https://beta.zameen.com/Homes/Lahore_EME_Society-410-1.html"
+    },
+    "Harbanspura": {
+        "id": "1050",
+        "link": "https://beta.zameen.com/Homes/Lahore_Harbans_Pura-1050-1.html"
+    },
+    "Cavalry Ground": {
+        "id": "69",
+        "link": "https://beta.zameen.com/Homes/Lahore_Cavalry_Ground-69-1.html"
+    },
+    "Township": {
+        "id": "146",
+        "link": "https://beta.zameen.com/Homes/Lahore_Town_Ship-146-1.html"
+    },
+    "Lahore Medical Housing Society": {
+        "id": "4359",
+        "link": "https://beta.zameen.com/Homes/Lahore_Medical_Housing_Society-4359-1.html"
+    },
+    "Faisal Town": {
+        "id": "79",
+        "link": "https://beta.zameen.com/Homes/Lahore_Faisal_Town-79-1.html"
+    },
+    "PIA Housing Scheme": {
+        "id": "444",
+        "link": "https://beta.zameen.com/Homes/Lahore_PIA_Housing_Scheme-444-1.html"
+    },
+    "Bedian Road": {
+        "id": "378",
+        "link": "https://beta.zameen.com/Homes/Lahore_Bedian_Road-378-1.html"
+    },
+    "Military Accounts Housing Society": {
+        "id": "781",
+        "link": "https://beta.zameen.com/Homes/Lahore_Military_Accounts_Housing_Society-781-1.html"
+    },
+    "Canal Garden": {
+        "id": "1287",
+        "link": "https://beta.zameen.com/Homes/Lahore_Canal_Garden-1287-1.html"
+    },
+    "Bahria Nasheman": {
+        "id": "4510",
+        "link": "https://beta.zameen.com/Homes/Lahore_Bahria_Nasheman-4510-1.html"
+    },
+    "Lalazaar Garden": {
+        "id": "9996",
+        "link": "https://beta.zameen.com/Homes/Lahore_Lalazaar_Garden-9996-1.html"
+    },
+    "Ferozepur Road": {
+        "id": "81",
+        "link": "https://beta.zameen.com/Homes/Lahore_Ferozepur_Road-81-1.html"
+    },
+    "Divine Gardens": {
+        "id": "1487",
+        "link": "https://beta.zameen.com/Homes/Lahore_Divine_Gardens-1487-1.html"
+    },
+    "Gulshan-e-Ravi": {
+        "id": "893",
+        "link": "https://beta.zameen.com/Homes/Lahore_Gulshan_e_Ravi-893-1.html"
+    },
+    "Punjab Coop Housing Society": {
+        "id": "456",
+        "link": "https://beta.zameen.com/Homes/Lahore_Punjab_Co_operative_Housing_Society-456-1.html"
+    },
+    "Bahria Orchard": {
+        "id": "1474",
+        "link": "https://beta.zameen.com/Homes/Lahore_Bahria_Orchard-1474-1.html"
+    },
+    "Marghzar Officers Colony": {
+        "id": "1047",
+        "link": "https://beta.zameen.com/Homes/Lahore_Marghzar_Officers_Colony-1047-1.html"
+    },
+    "Punjab Govt Employees Society": {
+        "id": "4430",
+        "link": "https://beta.zameen.com/Homes/Lahore_Punjab_Govt_Employees_Society-4430-1.html"
+    },
+    "Tariq Gardens": {
+        "id": "1356",
+        "link": "https://beta.zameen.com/Homes/Lahore_Tariq_Gardens-1356-1.html"
+    },
+    "Lalazar": {
+        "id": "749",
+        "link": "https://beta.zameen.com/Homes/Lahore_Lalazar-749-1.html"
+    },
+    "Canal Bank Housing Scheme": {
+        "id": "9354",
+        "link": "https://beta.zameen.com/Homes/Lahore_Canal_Bank_Housing_Scheme-9354-1.html"
+    },
+    "Garrison Homes": {
+        "id": "8430",
+        "link": "https://beta.zameen.com/Homes/Lahore_Garrison_Homes-8430-1.html"
+    },
+    "PCSIR Housing Scheme": {
+        "id": "450",
+        "link": "https://beta.zameen.com/Homes/Lahore_PCSIR_Housing_Scheme-450-1.html"
+    },
+    "Tajpura": {
+        "id": "760",
+        "link": "https://beta.zameen.com/Homes/Lahore_Taj_Pura-760-1.html"
+    },
+    "Raiwind Road": {
+        "id": "128",
+        "link": "https://beta.zameen.com/Homes/Lahore_Raiwind_Road-128-1.html"
+    },
+    "Lake City": {
+        "id": "1103",
+        "link": "https://beta.zameen.com/Homes/Lahore_Lake_City-1103-1.html"
+    },
+    "NFC 1": {
+        "id": "4083",
+        "link": "https://beta.zameen.com/Homes/Lahore_NFC_1-4083-1.html"
+    },
+    "Taj Bagh": {
+        "id": "1024",
+        "link": "https://beta.zameen.com/Homes/Lahore_Taj_Bagh-1024-1.html"
+    },
+    "Walton Road": {
+        "id": "153",
+        "link": "https://beta.zameen.com/Homes/Lahore_Walton_Road-153-1.html"
+    },
+    "Architects Engineers Housing Society": {
+        "id": "1242",
+        "link": "https://beta.zameen.com/Homes/Lahore_Architects_Engineers_Housing_Society-1242-1.html"
+    },
+    "Central Park Housing Scheme": {
+        "id": "1013",
+        "link": "https://beta.zameen.com/Homes/Lahore_Central_Park_Housing_Scheme-1013-1.html"
+    },
+    "Ichhra": {
+        "id": "88",
+        "link": "https://beta.zameen.com/Homes/Lahore_Ichhra-88-1.html"
+    },
+    "Park View Villas": {
+        "id": "1466",
+        "link": "https://beta.zameen.com/Homes/Lahore_Park_View_Villas-1466-1.html"
+    },
+    "Izmir Town": {
+        "id": "483",
+        "link": "https://beta.zameen.com/Homes/Lahore_Izmir_Town-483-1.html"
+    },
+    "Islampura": {
+        "id": "1369",
+        "link": "https://beta.zameen.com/Homes/Lahore_Islam_Pura-1369-1.html"
+    },
+    "Jubilee Town": {
+        "id": "766",
+        "link": "https://beta.zameen.com/Homes/Lahore_Jubilee_Town-766-1.html"
+    },
+    "Green Cap Housing Society": {
+        "id": "8150",
+        "link": "https://beta.zameen.com/Homes/Lahore_Green_Cap_Housing_Society-8150-1.html"
+    },
+    "Sui Gas Housing Society": {
+        "id": "446",
+        "link": "https://beta.zameen.com/Homes/Lahore_Sui_Gas_Housing_Society-446-1.html"
+    },
+    "Canal View": {
+        "id": "67",
+        "link": "https://beta.zameen.com/Homes/Lahore_Canal_View-67-1.html"
+    },
+    "Upper Mall": {
+        "id": "514",
+        "link": "https://beta.zameen.com/Homes/Lahore_Upper_Mall-514-1.html"
+    },
+    "Main Canal Bank Road": {
+        "id": "431",
+        "link": "https://beta.zameen.com/Homes/Lahore_Main_Canal_Bank_Road-431-1.html"
+    },
+    "Band Road": {
+        "id": "1212",
+        "link": "https://beta.zameen.com/Homes/Lahore_Band_Road-1212-1.html"
+    },
+    "Shahdara": {
+        "id": "1027",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shahdara-1027-1.html"
+    },
+    "DHA 11 Rahbar": {
+        "id": "1410",
+        "link": "https://beta.zameen.com/Homes/Lahore_DHA_11_Rahbar-1410-1.html"
+    },
+    "Nasheman-e-Iqbal": {
+        "id": "499",
+        "link": "https://beta.zameen.com/Homes/Lahore_Nasheman_e_Iqbal-499-1.html"
+    },
+    "Bismillah Housing Scheme": {
+        "id": "8446",
+        "link": "https://beta.zameen.com/Homes/Lahore_Bismillah_Housing_Scheme-8446-1.html"
+    },
+    "Mughalpura": {
+        "id": "489",
+        "link": "https://beta.zameen.com/Homes/Lahore_Mughal_Pura-489-1.html"
+    },
+    "Multan Road": {
+        "id": "48",
+        "link": "https://beta.zameen.com/Homes/Lahore_Multan_Road-48-1.html"
+    },
+    "Revenue Society": {
+        "id": "1359",
+        "link": "https://beta.zameen.com/Homes/Lahore_Revenue_Society-1359-1.html"
+    },
+    "College Road": {
+        "id": "4576",
+        "link": "https://beta.zameen.com/Homes/Lahore_College_Road-4576-1.html"
+    },
+    "Harbanspura Road": {
+        "id": "10375",
+        "link": "https://beta.zameen.com/Homes/Lahore_Harbanspura_Road-10375-1.html"
+    },
+    "Shoukat Town": {
+        "id": "4492",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shoukat_Town-4492-1.html"
+    },
+    "Mehar Fayaz Colony": {
+        "id": "9446",
+        "link": "https://beta.zameen.com/Homes/Lahore_Mehar_Fayaz_Colony-9446-1.html"
+    },
+    "Abdalians Housing Society": {
+        "id": "492",
+        "link": "https://beta.zameen.com/Homes/Lahore_Abdalians_Housing_Society-492-1.html"
+    },
+    "Awan Town": {
+        "id": "4366",
+        "link": "https://beta.zameen.com/Homes/Lahore_Awan_Town-4366-1.html"
+    },
+    "Sadaat Town": {
+        "id": "4421",
+        "link": "https://beta.zameen.com/Homes/Lahore_Sadaat_Town-4421-1.html"
+    },
+    "Al Faisal Town": {
+        "id": "4457",
+        "link": "https://beta.zameen.com/Homes/Lahore_Al_Faisal_Town-4457-1.html"
+    },
+    "Punjab Small Industries Colony": {
+        "id": "4420",
+        "link": "https://beta.zameen.com/Homes/Lahore_Punjab_Small_Industries_Colony-4420-1.html"
+    },
+    "Ghous Garden": {
+        "id": "10113",
+        "link": "https://beta.zameen.com/Homes/Lahore_Ghous_Garden-10113-1.html"
+    },
+    "BOR Board of Revenue Housing Society": {
+        "id": "756",
+        "link": "https://beta.zameen.com/Homes/Lahore_BOR_Housing_Society-756-1.html"
+    },
+    "Shadab Garden": {
+        "id": "4451",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shadab_Garden-4451-1.html"
+    },
+    "Zaheer Villas": {
+        "id": "8837",
+        "link": "https://beta.zameen.com/Homes/Lahore_Zaheer_Villas-8837-1.html"
+    },
+    "Nishtar Colony": {
+        "id": "4398",
+        "link": "https://beta.zameen.com/Homes/Lahore_Nishtar_Colony-4398-1.html"
+    },
+    "Fateh Garh": {
+        "id": "1023",
+        "link": "https://beta.zameen.com/Homes/Lahore_Fateh_Garh-1023-1.html"
+    },
+    "Airline Housing Society": {
+        "id": "1290",
+        "link": "https://beta.zameen.com/Homes/Lahore_Airline_Housing_Society-1290-1.html"
+    },
+    "Al Hafeez Gardens": {
+        "id": "8573",
+        "link": "https://beta.zameen.com/Homes/Lahore_Al_Hafeez_Gardens-8573-1.html"
+    },
+    "Sami Town": {
+        "id": "9883",
+        "link": "https://beta.zameen.com/Homes/Lahore_Sami_Town-9883-1.html"
+    },
+    "Baghbanpura": {
+        "id": "1057",
+        "link": "https://beta.zameen.com/Homes/Lahore_Baghban_Pura-1057-1.html"
+    },
+    "Sukh Chayn Gardens": {
+        "id": "473",
+        "link": "https://beta.zameen.com/Homes/Lahore_Sukh_Chayn_Gardens-473-1.html"
+    },
+    "Nishat Colony": {
+        "id": "1459",
+        "link": "https://beta.zameen.com/Homes/Lahore_Nishat_Colony-1459-1.html"
+    },
+    "GT Road": {
+        "id": "472",
+        "link": "https://beta.zameen.com/Homes/Lahore_G.T_Road-472-1.html"
+    },
+    "Iqbal Park": {
+        "id": "513",
+        "link": "https://beta.zameen.com/Homes/Lahore_Iqbal_Park-513-1.html"
+    },
+    "Green City": {
+        "id": "1012",
+        "link": "https://beta.zameen.com/Homes/Lahore_Green_City-1012-1.html"
+    },
+    "Muslim Town": {
+        "id": "326",
+        "link": "https://beta.zameen.com/Homes/Lahore_Muslim_Town-326-1.html"
+    },
+    "Rana Town": {
+        "id": "4354",
+        "link": "https://beta.zameen.com/Homes/Lahore_Rana_Town-4354-1.html"
+    },
+    "Ali Alam Garden": {
+        "id": "9809",
+        "link": "https://beta.zameen.com/Homes/Lahore_Ali_Alam_Garden-9809-1.html"
+    },
+    "Sahafi Colony": {
+        "id": "9536",
+        "link": "https://beta.zameen.com/Homes/Lahore_Sahafi_Colony-9536-1.html"
+    },
+    "Ali View Garden": {
+        "id": "8600",
+        "link": "https://beta.zameen.com/Homes/Lahore_Ali_View_Garden-8600-1.html"
+    },
+    "Airport Road": {
+        "id": "8347",
+        "link": "https://beta.zameen.com/Homes/Lahore_Airport_Road-8347-1.html"
+    },
+    "Shershah Colony - Raiwind Road": {
+        "id": "4391",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shershah_Colony___Raiwind_Road-4391-1.html"
+    },
+    "Prime Homes 1": {
+        "id": "9758",
+        "link": "https://beta.zameen.com/Homes/Lahore_Prime_Homes_1-9758-1.html"
+    },
+    "Garhi Shahu": {
+        "id": "1040",
+        "link": "https://beta.zameen.com/Homes/Lahore_Garhi_Shahu-1040-1.html"
+    },
+    "Gulshan-e-Lahore": {
+        "id": "498",
+        "link": "https://beta.zameen.com/Homes/Lahore_Gulshan_e_Lahore-498-1.html"
+    },
+    "Kahna": {
+        "id": "9358",
+        "link": "https://beta.zameen.com/Homes/Lahore_Kahna-9358-1.html"
+    },
+    "Aashiana Road": {
+        "id": "9206",
+        "link": "https://beta.zameen.com/Homes/Lahore_Aashiana_Road-9206-1.html"
+    },
+    "Audit & Accounts Housing Society": {
+        "id": "1134",
+        "link": "https://beta.zameen.com/Homes/Lahore_Audit_&_Accounts_Co_operative_Society-1134-1.html"
+    },
+    "Green Town": {
+        "id": "1053",
+        "link": "https://beta.zameen.com/Homes/Lahore_Green_Town-1053-1.html"
+    },
+    "Khayaban-e-Amin": {
+        "id": "1514",
+        "link": "https://beta.zameen.com/Homes/Lahore_Khayaban_e_Amin-1514-1.html"
+    },
+    "Shalimar Link Road": {
+        "id": "9437",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shalimar_Link_Road-9437-1.html"
+    },
+    "Shah Jamal": {
+        "id": "1491",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shah_Jamal-1491-1.html"
+    },
+    "Alfalah Town": {
+        "id": "738",
+        "link": "https://beta.zameen.com/Homes/Lahore_Alfalah_Town-738-1.html"
+    },
+    "Shadbagh": {
+        "id": "783",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shadbagh-783-1.html"
+    },
+    "PCSIR Staff Colony": {
+        "id": "4573",
+        "link": "https://beta.zameen.com/Homes/Lahore_PCSIR_Staff_Colony-4573-1.html"
+    },
+    "Chungi Amar Sadhu": {
+        "id": "1511",
+        "link": "https://beta.zameen.com/Homes/Lahore_Chungi_Amar_Sadhu-1511-1.html"
+    },
+    "Defence Road": {
+        "id": "4574",
+        "link": "https://beta.zameen.com/Homes/Lahore_Defence_Road-4574-1.html"
+    },
+    "Punjab Govt Servant Society": {
+        "id": "3027",
+        "link": "https://beta.zameen.com/Homes/Lahore_Punjab_Govt_Servant_Society-3027-1.html"
+    },
+    "Hajvery Housing Scheme": {
+        "id": "4567",
+        "link": "https://beta.zameen.com/Homes/Lahore_Hajvery_Housing_Scheme-4567-1.html"
+    },
+    "Daroghewala": {
+        "id": "4555",
+        "link": "https://beta.zameen.com/Homes/Lahore_Daroghewala-4555-1.html"
+    },
+    "Jamil Town": {
+        "id": "4533",
+        "link": "https://beta.zameen.com/Homes/Lahore_Jamil_Town-4533-1.html"
+    },
+    "Wahdat Road": {
+        "id": "634",
+        "link": "https://beta.zameen.com/Homes/Lahore_Wahdat_Road-634-1.html"
+    },
+    "Ittifaq Town": {
+        "id": "448",
+        "link": "https://beta.zameen.com/Homes/Lahore_Ittefaq_Town-448-1.html"
+    },
+    "Eden Avenue Extension": {
+        "id": "9016",
+        "link": "https://beta.zameen.com/Homes/Lahore_Eden_Avenue_Extension-9016-1.html"
+    },
+    "Judicial Colony": {
+        "id": "1684",
+        "link": "https://beta.zameen.com/Homes/Lahore_Judicial_Colony-1684-1.html"
+    },
+    "Sanda": {
+        "id": "1357",
+        "link": "https://beta.zameen.com/Homes/Lahore_Sanda-1357-1.html"
+    },
+    "Dharampura": {
+        "id": "529",
+        "link": "https://beta.zameen.com/Homes/Lahore_Dharam_Pura-529-1.html"
+    },
+    "Formanites Housing Scheme": {
+        "id": "1020",
+        "link": "https://beta.zameen.com/Homes/Lahore_Formanites_Housing_Scheme-1020-1.html"
+    },
+    "Salli Town": {
+        "id": "4456",
+        "link": "https://beta.zameen.com/Homes/Lahore_Salli_Town-4456-1.html"
+    },
+    "Nawab Town": {
+        "id": "4424",
+        "link": "https://beta.zameen.com/Homes/Lahore_Nawab_Town-4424-1.html"
+    },
+    "Guldasht Town": {
+        "id": "1210",
+        "link": "https://beta.zameen.com/Homes/Lahore_Guldasht_Town-1210-1.html"
+    },
+    "Clifton Colony": {
+        "id": "4526",
+        "link": "https://beta.zameen.com/Homes/Lahore_Clifton_Colony-4526-1.html"
+    },
+    "Shadman 1": {
+        "id": "497",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shadman_1-497-1.html"
+    },
+    "Shershah Colony - Ichra": {
+        "id": "4518",
+        "link": "https://beta.zameen.com/Homes/Lahore_Shershah_Colony___Ichra-4518-1.html"
+    },
+    "Mian Amiruddin Park": {
+        "id": "9989",
+        "link": "https://beta.zameen.com/Homes/Lahore_Mian_Amiruddin_Park-9989-1.html"
+    },
+    "T & T Aabpara Housing Society": {
+        "id": "1517",
+        "link": "https://beta.zameen.com/Homes/Lahore_T_&_T_Aabpara_Housing_Society-1517-1.html"
+    },
+    "HBFC Housing Society": {
+        "id": "1718",
+        "link": "https://beta.zameen.com/Homes/Lahore_HBFC_Housing_Society-1718-1.html"
+    },
+    "Canal Burg": {
+        "id": "9211",
+        "link": "https://beta.zameen.com/Homes/Lahore_Canal_Burg-9211-1.html"
+    }
+}
