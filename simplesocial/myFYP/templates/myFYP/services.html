@@ -1,0 +1,60 @@
+{% extends "header.html"%}
+{% load staticfiles %}
+{% block content %}
+<div class="sub-banner">
+    <div class="overlay">
+        <div class="container">
+            <div class="breadcrumb-area">
+                <h1>Service Providers</h1>
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Service Providers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+   <div class="content-area featured-properties">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Service Providers</h1>
+        </div>
+        <div class="row">
+            <div class="filtr-container">
+                <div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Service</th>
+          <th>email</th>
+          <th>profile Link</th>
+          <th>Image</t>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for vs in vas %}
+        <tr>
+          <td>{{vs.pk}}</td>
+          <td>{{vs.user.username}}</td>
+          <td>{{vs.type}}</td>
+
+          <td>{{vs.user.email}}</td>
+          <td>{{vs.portfolio_site}}</td>
+          <td>
+            <img src = "{{ vs.profile_pic.url }}" alt="properties-1"  height="50" width="50">
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+            </div>
+        </div>
+       </div>
+    </div>
+{% endblock %}

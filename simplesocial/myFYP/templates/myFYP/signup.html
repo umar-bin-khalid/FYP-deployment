@@ -1,0 +1,47 @@
+{% extends "header.html" %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+<div class="container">
+  <div class="content-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <!-- Form content box start -->
+                  <div class="form-content-box">
+                      <!-- details -->
+                      <div class="details">
+    <h1>Register Today</h1>
+    <form method="POST">
+        {% csrf_token %}
+
+		{% for hidden in form.hidden_fields %}
+  {{ hidden }}
+{% endfor %}
+
+{% for field in form.visible_fields %}
+  <div class="form-group">
+    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {{ field|add_class:'form-control' }}
+
+    {% for error in field.errors %}
+      <span class="help-block">{{ error }}</span>
+    {% endfor %}
+  </div>
+{% endfor %}
+        <input type="submit" value="Sign Up" class="btn btn-default">
+    </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

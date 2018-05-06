@@ -1,0 +1,278 @@
+
+{% extends "header.html"%}
+{% load staticfiles %}
+{% block content %}
+<!-- Sub banner start -->
+<div class="sub-banner">
+    <div class="overlay">
+        <div class="container">
+            <div class="breadcrumb-area">
+                <h1>Properties Detail</h1>
+                <ul class="breadcrumbs">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Properties Detail</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Properties details page start -->
+<div class="content-area  properties-details-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <!-- Header -->
+                <div class="heading-properties clearfix sidebar-widget">
+                    <div class="pull-left">
+                        <h3>{{product.propertyTitle}}</h3>
+                        <br>
+                        <p>
+                            <i class="fa fa-map-marker"></i>{{product.address}},
+                        </p>
+                        <h3>Property Uploaded By : {{product.user}}</h3>
+                    </div>
+                    <div class="pull-right">
+                        <h3><span>{{product.price}}</span></h3>
+                        <p>
+
+                        </p>
+                       <i class="fa fa-location-arrow"></i>
+                    </div>
+                </div>
+                <!-- Properties details section start -->
+                <div class="Properties-details-section sidebar-widget">
+                    <!-- Properties detail slider start -->
+                    <div class="properties-detail-slider simple-slider mrg-btm-40 ">
+                        <div id="carousel-custom" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-outer">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="{{ product.document.url }}"
+                                              height="3" width="710" alt="properties-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Property description start -->
+                    <div class="panel-box properties-panel-box Property-description">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="true">Description</a></li>
+                            <li class=""><a href="#tab2default" data-toggle="tab" aria-expanded="false">Condition</a></li>
+                            <li class=""><a href="#tabdefault" data-toggle="tab" aria-expanded="false">Location</a></li>
+                            <li class=""><a href="#tab5default" data-toggle="tab" aria-expanded="false">Video</a></li>
+                        </ul>
+                        <div class="panel with-nav-tabs panel-default">
+                            <div class="panel-body">
+                                <div class="tab-content">
+
+                                    <div class="tab-pane fade active in" id="tabdefault">
+                                        <div class="main-title-2">
+                                            <h1><span>Address</span></h1>
+                                        </div>
+                                        <p>{{product.address}}</p>
+                                        <br>
+                                        <p></p>
+                                        <div class="main-title-2">
+                                            <h1><span>City and Location</span></h1>
+                                        </div>
+                                         <p>{{product.city}} and location is {{product.location}}</p>
+                                        <br>
+                                    </div>
+                                    <div class="tab-pane fade active in" id="tab1default">
+                                        <div class="main-title-2">
+                                            <h1><span>Description</span></h1>
+                                        </div>
+                                        <p>{{product.description}}</p>
+                                        <br>
+                                        <p></p>
+                                    </div>
+                                    <div class="tab-pane fade features" id="tab2default">
+                                        <!-- Properties condition start -->
+                                        <div class="properties-condition">
+                                            <div class="main-title-2">
+                                                <h1><span>Condition</span></h1>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <ul class="condition">
+                                                        <li>
+                                                            <i class="fa fa-check-square"></i>{{product.Rooms}} Beds
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check-square"></i>{{product.BathRooms}} Bathroom
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <ul class="condition">
+                                                        <li>
+                                                            <i class="fa fa-check-square"></i>{{product.sqft_Measurement}} sq ft
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check-square"></i>TV
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <ul class="condition">
+                                                        <li>
+                                                            <i class="fa fa-check-square"></i>Extra Garage : {{product.freeParking}}
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check-square"></i>Swimming Pool : {{product.swimmingPool}}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                 <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <ul class="condition">
+                                                        <li>
+                                                            <i class="fa fa-check-square"></i>{{product.buildingAge}} years old
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                 <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <ul class="condition">
+                                                        <li>
+                                                            <i class="fa fa-check-square"></i>AC : {{product.airCondition}}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- Properties condition end -->
+                                    </div>
+                                    <div class="tab-pane fade" id="tab5default">
+                                        <!-- Inside properties start  -->
+                                        <div class="inside-properties">
+                                            <!-- Main Title 2 -->
+                                            <div class="main-title-2">
+                                                <h1><span>Video</span></h1>
+                                            </div>
+                                            <iframe src="https://www.youtube.com/embed/5e0LxrLSzok" allowfullscreen=""></iframe>
+                                        </div>
+                                        <!-- Inside properties end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Property description end -->
+                </div>
+                <!-- Properties details section end -->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <!-- Sidebar start -->
+                <div class="sidebar right">
+
+                    <!-- Social media start -->
+                    <div class="social-media sidebar-widget clearfix">
+                        <!-- Main Title 2 -->
+                        <div class="main-title-2">
+                            <h1><span>Social</span> Media</h1>
+                        </div>
+                        <!-- Social list -->
+                        <ul class="social-list">
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- Social media end -->
+
+                    <!-- Agent widget start -->
+                    <div class="sidebar-widget contact-form agent-widget">
+                        <div class="main-title-2">
+                            <h1><span>Message</span> to Dealer</h1>
+                        </div>
+                        <form id="agent_form" action="" method="GET" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group enter-email">
+                                        <center><label>Dealer Name</label></center>
+                                        <center><h3>{{product.contactName}}</h3></center>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group enter-email">
+                                        <center><label>Dealer Number</label></center>
+                                        <center><h3>{{product.contactPhone}}</h3></center>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group enter-email">
+                                        <center><label>Dealer Email</label></center>
+                                        <center><h3>{{product.contactEmail}}</h3></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Agent widget end -->
+                </div>
+                <!-- Sidebar end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Properties details page end -->
+
+<!-- Partners block start -->
+<div class="partners-block">
+    <div class="container">
+        <h3>Brands & Partners</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="carousel our-partners slide" id="ourPartners">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="{% static 'myFYP/img/brand/audiojungle.png' %}" alt="audiojungle">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="{% static 'myFYP/img/brand/themeforest.png' %}" alt="themeforest">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="{% static 'myFYP/img/brand/tuts.png' %}" alt="tuts">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="{% static 'myFYP/img/brand/graphicriver.png' %}" alt="graphicriver">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="{% static 'myFYP/img/brand/codecanyon.png' %}" alt="codecanyon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#ourPartners" data-slide="prev"><i class="fa fa-chevron-left icon-prev"></i></a>
+                    <a class="right carousel-control" href="#ourPartners" data-slide="next"><i class="fa fa-chevron-right icon-next"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Partners block end -->
+{% endblock %}

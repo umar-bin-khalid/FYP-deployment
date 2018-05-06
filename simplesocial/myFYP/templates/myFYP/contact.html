@@ -1,0 +1,85 @@
+{% extends "header.html"%}
+{% block content %}
+
+
+<!-- Contact body start -->
+<div class="contact-body content-area">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+              <center><h1>Send Message to Admin</h1></center>
+            {% load widget_tweaks %}
+              <div class="col-md-12">
+              <form method="post" action="" method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {% for field in form.visible_fields %}
+                  <div class="form-group">
+                  {{ field.label_tag }}
+                  {% render_field field class="form-control" %}
+                  {% if field.help_text %}
+                  <small class="form-text text-muted">{{ field.help_text }}</small>
+                      {% endif %}
+                  </div>
+              {% endfor %}
+
+              <center><button type="submit" class="btn btn-primary">Submit</button></center>
+              <br>
+              </form>
+          </div></div>
+          <br>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                <!-- Contact details start -->
+                <div class="contact-details">
+                    <div class="main-title-2">
+                        <h1><span>Our</span> address</h1>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>Office Address</h4>
+                            <p>Punjab University College of Information Technology</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>Phone Number</h4>
+                            <p>
+                                <a href="tel:0477-0477-8556-552">office: 042 35303442</a>
+                            </p>
+                            <p>
+                                <a href="tel:+55-417-634-7071">Mobile: +92 335 4342184</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media mrg-btm-0">
+                        <div class="media-left">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>Email Address</h4>
+                            <p>
+                                <a  href="mailto:talhaishtiaq944@gmail.com" target="_blank">estatemerkez@hr.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact details end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact body end -->
+
+<!-- Google map start -->
+<div class="section">
+    <div class="map">
+        <div id="map" class="contact-map"></div>
+    </div>
+</div>
+<!-- Google map end -->
+	{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "header.html"%}
+{% load staticfiles %}
+{% block content %}
+{% load widget_tweaks %}
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Form content box start -->
+                <div class="form-content-box">
+                  {% if registered %}
+                  <h1>Thank you for registering!</h1>
+                {% else %}
+                  <h1>Register Here</h1>
+                  <h3>Just fill out the form.</h3>
+
+                  <form enctype="multipart/form-data" method="POST">
+                    {% csrf_token %}
+                    {% for hidden in user_form.hidden_fields %}
+                      {{ hidden }}
+                    {% endfor %}
+
+                    {% for field in user_form.visible_fields %}
+                      <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field|add_class:'form-control' }}
+
+                        {% for error in field.errors %}
+                          <span class="help-block">{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                    {% endfor %}
+
+                    {% for field in profile_form.visible_fields %}
+                      <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field|add_class:'form-control' }}
+
+                        {% for error in field.errors %}
+                          <span class="help-block">{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                    {% endfor %}
+
+                    <input type="submit" name="" value="Register">
+                  </form>
+
+                {% endif %}
+
+                        <!-- Form end-->
+                    </div>
+                    <!-- Footer -->
+                    <div class="footer">
+                        <span>
+                            I want to <a href="{% url 'myFYP:main_login' %}">return to login</a>
+
+                        </span>
+                    </div>
+                </div>
+                <!-- Form content box end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content area end -->
+{% endblock %}

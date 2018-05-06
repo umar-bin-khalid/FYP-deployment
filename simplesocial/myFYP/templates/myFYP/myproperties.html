@@ -1,0 +1,93 @@
+{% extends "header.html"%}
+{% load staticfiles %}
+{% block content %}
+<div class="sub-banner">
+    <div class="overlay">
+        <div class="container">
+            <div class="breadcrumb-area">
+                <h1>Properties</h1>
+                <ul class="breadcrumbs">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Properties</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div class="content-area featured-properties">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Properties</h1>
+        </div>
+        <div class="row">
+            <div class="filtr-container">
+            {% for product in products %}
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
+                    <div class="property">
+                        <!-- Property img -->
+
+                        <a href="{% url 'myFYP:detail' product.id %}" class="property-img">
+                            <div class="property-tag button alt featured">{{ product.location }}</div>
+                            <div class="property-tag button sale">{{ product.status }}</div>
+                            <div class="property-price">{{ product.price }}</div>
+                            <img src = "{{ product.document.url }}" alt="properties-1"  height="180" width="480">
+                        </a>
+                        <!-- Property content -->
+                        <div class="property-content">
+                            <!-- title -->
+                            <h1 class="title">
+                                <a href="{% url 'myFYP:detail' product.id %}">{{ product.propertyTitle }}</a>
+                            </h1>
+                            <!-- Property address -->
+                            <h4 class="property-address">
+                                 <i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{ product.address }}
+                            </h4>
+                            <!-- Facilities List -->
+                            <ul class="facilities-list clearfix">
+                                <li>
+                                    <i class="fa fa-bed" aria-hidden="true"></i>
+                                    <span>{{ product.Rooms }}&nbsp;rooms</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-bath" aria-hidden="true"></i>
+                                    <span>{{ product.BathRooms }}&nbsp;bathrooms</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-pin" aria-hidden="true"></i>
+                                    <span>{{ product.city }}</span>
+                                </li>
+                                <li>
+                                   <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>{{ product.postalCode }}</span>
+                                </li>
+                                <li>
+                                   <i class="fa fa-car" aria-hidden="true"></i>
+                                    <span>{{ product.freeParking }}</span>
+                                </li>
+                            </ul>
+                            <!-- Property footer -->
+                            <div class="property-footer">
+                                <span class="left"><b>Supplier Name</b></span>
+                                <span class="right">
+                                    <a href="#"><b>{{ product.contactName }}</b></a>
+                                </span>
+
+                            </div>
+                            <div class="property-footer">
+                                <span class="left"><b>Upload at </b></span>
+                                <span class="right">
+                                    <a href="#"><b>{{ product.uploaded_at }}</b></a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "header.html"%}
+{% load staticfiles %}
+{% block content %}
+<div class="sub-banner">
+    <div class="overlay">
+        <div class="container">
+            <div class="breadcrumb-area">
+                <h1>Service Providers</h1>
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Service Providers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <div class="content-area featured-properties">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Reviews Of Locality</h1>
+        </div>
+        <div class="row">
+            <div class="filtr-container">
+                <div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>Locality rating</th>
+          <th>Cleanliness Rating</th>
+          <th>Security Rating</th>
+          <th>Parks Rating</th>
+          <th>play grounds Rating</th>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for rev in reviews %}
+        <tr>
+          <td>
+            {{rev.location}}
+        </td>
+          <td>{{ rev.rate_locality }} / 10
+
+          </td>
+          <td>{{ rev.rate_cleanliness }} / 10</td>
+          <td>{{ rev.rate_security }} / 10</td>
+          <td>{{rev.rate_parks}} / 10</td>
+          <td>{{rev.playGrounds}} / 10</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+            </div>
+        </div>
+       </div>
+    </div>
+{% endblock %}
