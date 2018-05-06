@@ -67,49 +67,57 @@
                 <form method="GET" action="/request_page/ ">
 				{% csrf_token %}
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="bedrooms" data-live-search="true" data-live-search-placeholder="Search value" >
-                                    <option>Locality</option>
-                                    <option>johar town</option>
-                                    <option>Allama Iqbal Town</option>
-									<option>Bahria Town</option>
-									<option>Wapda Town</option>
-									<option>Model Town</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="mytextbox" data-live-search="true" data-live-search-placeholder="Search value" >
-                                    <option>Type</option>
-                                    <option>0</option>
-									                  <option>1</option>
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                          <div class="form-group">
+                              <select class="selectpicker search-fields" name="locations" data-live-search="true" data-live-search-placeholder="Search value" >
+                                  <option>Locality</option>
+                                  <option>Johar Town</option>
+                                  <option>Allama Iqbal Town</option>
+                                  <option>Bahria Town</option>
+                                  <option>Wapda Town</option>
+                                  <option>Model Town</option>
+                                  <option>Samanabad</option>
+                                  <option>Sabzazar Scheme</option>
+                                  <option>Gulberg</option>
+                                  <option>Paragon City</option>
+                                  <option>Harbanspura</option>
+                                  <option>Cavalry Ground</option>
+                                  <option>Township</option>
 
-                                </select>
-                            </div>
-                        </div>
+                              </select>
+                          </div>
+                  </div>
 
-						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-                            <div class="form-group">
-                                <input class="selectpicker search-fields" placeholder="Min Price" name="myminbox">
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                          <div class="form-group">
+                              <select class="selectpicker search-fields" name="mytextbox" data-live-search="true" data-live-search-placeholder="Search value">
+                                  <option>Property Status</option>
+                                  <option>Buy</option>
+                                  <option>Rent</option>
+                              </select>
+                          </div>
+                      </div>
 
-                                </input>
-                            </div>
-            </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                          <div class="form-group">
+                              <input class="selectpicker search-fields" placeholder="Min Price" type="number" min="25000" step="5000" name="myminbox">
 
-						<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-                            <div class="form-group">
-                                <input class="selectpicker search-fields" placeholder="Max Price" name="mymaxbox">
+                              </input>
+                          </div>
+          </div>
 
-                                </input>
-                            </div>
-                        </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                          <div class="form-group">
+                              <input class="selectpicker search-fields" placeholder="Max Price" type="number" min="25000" step="5000" name="mymaxbox">
 
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 ">
+                              </input>
+                          </div>
+          </div>
+
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 ">
                             <div class="form-group">
                                 <!-- <button class="search-button" id="mybtn">Search</button> -->
-								<input type="submit" class="callScraper" value="Click" name="mybtn" id="abc">
+								                        <input type="submit" class="search-button" value="Search" name="mybtn" id="abc">
                             </div>
                         </div>
                     </div>
