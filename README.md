@@ -2,7 +2,7 @@
 Final Year Project
 ============
 
-Frame Work: Django(Python)
+Framework: Django(Python)
 ============
 
 This repository is for my final year project in PUCIT.
