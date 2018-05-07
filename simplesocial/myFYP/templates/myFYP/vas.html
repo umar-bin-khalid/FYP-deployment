@@ -43,19 +43,24 @@
                     <br>
 
 					<center>
-                       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-					<center><h1>If you are a service provider? </h1></center
-                        <ul>
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+  <center><h1>If you are a service provider? </h1></center>
+                <ul>
 
-							<br>
+      <br>
 
-							<class="nav navbar-nav">
+      <class="nav navbar-nav">
 
-                        <a href="{% url 'myFYP:register' %}" class="sign-in"><i class="fa fa-user"></i> Join Our Platform Today</a>
+      {% if not user.is_anonymous %}
+      <p>If your are not seeing the link for your registration then you must logout first</p>
+      {%endif%}
+      {% if user.is_anonymous %}
+                <a href="{% url 'myFYP:register' %}" class="sign-in"><i class="fa fa-user"></i> Join Our Platform Today</a>
+                {% endif %}
+                </ul>
 
-                        </ul>
+            </div>
 
-                    </div>
 					</center>
                 </div>
 				</div>
