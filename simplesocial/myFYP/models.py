@@ -56,8 +56,6 @@ class Products(models.Model):
     status = models.CharField(max_length=30, choices=status_option, default='sale')
     price = models.CharField(max_length=100)
     Rooms  = models.CharField(max_length=100)
-    BathRooms  = models.CharField(max_length=100)
-    address = models.CharField(max_length=200)
     city = models.CharField(max_length=100)
     postalCode = models.CharField(max_length=100)
     buildingAge = models.CharField(max_length=100)
@@ -92,7 +90,9 @@ class Localities(models.Model):
         return self.location
 
 class Contact(models.Model):
+
     name = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
     subject = models.CharField(max_length=100)
     Phone_Number = models.CharField(max_length=100)
     Message = models.CharField(max_length=10000)

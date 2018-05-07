@@ -45,6 +45,7 @@ class ProductForm(forms.ModelForm):
 class contactForm(forms.ModelForm):
     Message = forms.CharField( label='Entre Your Message along with your email:',
                               widget=forms.Textarea(attrs={'placeholder': 'Enter here...'}))
+    email = forms.EmailField()                          
     class Meta():
         model = Contact
         fields = '__all__'

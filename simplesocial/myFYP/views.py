@@ -13,24 +13,35 @@ class SignUp(CreateView):
     form_class = forms.UserCreateForm
     success_url = reverse_lazy("login")
     template_name = "myFYP/signup.html"
-"""
-class Contact(TemplateView):
-    template_name = "myFYP/Contact.html"
-    """
+
+
+@login_required(login_url='/myFYP/signup/')
+def delete(request, product_id):
+    product = Products.objects.get(id=product_id)
+    product.delete()
+    #message.success(request,"deleted")
+    return properties(request)
+
+
+
 def contact(request):
     if request.method == 'POST':
         form = contactForm(request.POST,)
         if form.is_valid():
             name = form.cleaned_data['name']
-            #from_email = form.cleaned_data['email']
+            from_email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
             Phone_Number = form.cleaned_data['Phone_Number']
             message = form.cleaned_data['Message']
             name = form.cleaned_data['name']
             #form = [str(message)]
-
-            email = EmailMessage(subject, message,to=['umar.ubk@gmail.com'])
+            #form = [message,'Phone_Number',Phone_Number, 'name',name]
+            email = EmailMessage(subject,message,
+                                     from_email,
+                                     ['smackburg@gmail.com', 'umar.ubk@gmail.com'],
+                                     reply_to=[from_email])
             email.send()
+
             form = contactForm()
             return render(request, 'myFYP/contact.html', {
                 'form': form
@@ -123,6 +134,7 @@ def properties(request):
     products = Products.objects.filter(user=request.user)
     return render(request, 'myFYP/userProperties.html',{'products':products})
 
+@login_required(login_url='/myFYP/signup/')
 def edit(request,product_id=None):
     instance = get_object_or_404(Products , id = product_id)
     form = ProductForm(request.POST or None,request.FILES,instance=instance)
