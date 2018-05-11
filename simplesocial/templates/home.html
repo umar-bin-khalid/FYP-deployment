@@ -69,8 +69,8 @@
                     <div class="row">
                       <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                           <div class="form-group">
-                              <select class="selectpicker search-fields" name="locations" data-live-search="true" data-live-search-placeholder="Search value" >
-                                  <option>Locality</option>
+                              <select class="selectpicker search-fields" name="locations"  required>
+                                  <option value="">Locality</option>
                                   <option>Johar Town</option>
                                   <option>Allama Iqbal Town</option>
                                   <option>Bahria Town</option>
@@ -83,6 +83,13 @@
                                   <option>Harbanspura</option>
                                   <option>Cavalry Ground</option>
                                   <option>Township</option>
+                                  <option>Eden</option>
+                                  <option>DHA Defence</option>
+                                  <option>Garden Town</option>
+                                  <option>EME Society</option>
+                                  <option>Faisal Town</option>
+                                  <option>Gulshan-e-Ravi</option>
+                                  <option>Punjab Coop Housing Society</option>
 
                               </select>
                           </div>
@@ -90,8 +97,8 @@
 
                       <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                           <div class="form-group">
-                              <select class="selectpicker search-fields" name="mytextbox" data-live-search="true" data-live-search-placeholder="Search value">
-                                  <option>Property Status</option>
+                              <select class="selectpicker search-fields" name="mytextbox" required="required">
+                                  <option value="">Property Status</option>
                                   <option>Buy</option>
                                   <option>Rent</option>
                               </select>
@@ -100,7 +107,7 @@
 
           <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                           <div class="form-group">
-                              <input class="selectpicker search-fields" placeholder="&nbsp; &nbsp; Min Price" type="number" min="25000" step="5000" name="myminbox">
+                              <input class="selectpicker search-fields" placeholder="&nbsp; &nbsp; Min Price" type="number" min="25000" step="5000" name="myminbox" required="required">
 
                               </input>
                           </div>
@@ -108,7 +115,7 @@
 
           <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                           <div class="form-group">
-                              <input class="selectpicker search-fields" placeholder="&nbsp; &nbsp;Max Price" type="number" min="25000" step="5000" name="mymaxbox">
+                              <input class="selectpicker search-fields" placeholder="&nbsp; &nbsp;Max Price" type="number" min="25000" step="5000" name="mymaxbox" required>
 
                               </input>
                           </div>
@@ -117,7 +124,7 @@
                       <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 ">
                             <div class="form-group">
                                 <!-- <button class="search-button" id="mybtn">Search</button> -->
-								                        <input type="submit" class="search-button" value="Search" name="mybtn" id="abc">
+								                        <input type="submit" class="search-button" value="Search" name="mybtn">
                             </div>
                         </div>
                     </div>
@@ -635,13 +642,6 @@
 });
 
 </script> -->
-<script>
-$(document).ready( function() {
 
-    $("#abc").click( function(event) {
-        alert("You clicked the button using JQuery!");
-    });
-});
-</script>
 
 {% endblock %}
