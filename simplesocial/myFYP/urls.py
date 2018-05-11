@@ -13,6 +13,7 @@ urlpatterns = [
 	url(r'^addproperty/$',views.addproperty, name='addproperty'),
     url(r'^About-Us/$',views.About.as_view(), name='About-Us'),
     url(r'^services/$',views.Services.as_view(), name='Our-Services'),
+    url(r'^nointernet/$',views.Nointernet.as_view(), name='nointernet'),
     url(r'^main_login/$',views.Main_login.as_view(),name='main_login'),
     url(r'^myproperties/$',views.myproperties, name='myproperties'),
     url(r'^(?P<product_id>[0-9]+)/$', views.detail, name='detail'),
@@ -31,5 +32,6 @@ urlpatterns = [
     url(r'^defence_rev/$',views.defence_rev, name='defence_rev'),
     url(r'^register/$',views.register,name='register'),
     url(r'^valueAddedServices/$',views.valueAddedServices,name='valueAddedServices'),
+    url(r'^delete_property/(?P<product_id>[0-9]+)/$', views.delete, name='delete'),
 
 ]

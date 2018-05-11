@@ -8,6 +8,11 @@ from . import forms
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 from django.core.mail import send_mail, BadHeaderError, EmailMessage
+from django.http import Http404
+
+
+class Nointernet(TemplateView):
+    template_name = "myFYP/nointernet.html"
 
 class SignUp(CreateView):
     form_class = forms.UserCreateForm
@@ -38,7 +43,7 @@ def contact(request):
             #form = [message,'Phone_Number',Phone_Number, 'name',name]
             email = EmailMessage(subject,message,
                                      from_email,
-                                     ['smackburg@gmail.com', 'umar.ubk@gmail.com'],
+                                     ['umar.ubk@gmail.com'],
                                      reply_to=[from_email])
             email.send()
 
@@ -106,20 +111,40 @@ def addproperty(request):
     })
 
 def myproperties(request):
-    products = Products.objects.all()
+    try:
+        products = Products.objects.all()
+    except products.DoesNotExist:
+        raise Http404("Property Does Not Exist")
     return render(request, 'myFYP/myproperties.html',{'products':products})
+
 def iqbalTown(request):
-    products = Products.objects.filter(location="iqbal town")
+    try:
+        products = Products.objects.filter(location="iqbal town")
+    except products.DoesNotExist:
+        raise Http404("Property Does Not Exist")
     return render(request, 'myFYP/myproperties.html',{'products':products})
 
 def mustafaTown_properties(request):
-    products = Products.objects.filter(location="mustafa town")
+    try:
+        products = Products.objects.filter(location="mustafa town")
+    except products.DoesNotExist:
+        raise Http404("Property Does Not Exist")
     return render(request, 'myFYP/myproperties.html',{'products':products})
+
+
 def joharTown_properties(request):
-    products = Products.objects.filter(location="johar town")
+    try:
+        products = Products.objects.filter(location="johar town")
+    except products.DoesNotExist:
+        raise Http404("Property Does Not Exist")
     return render(request, 'myFYP/myproperties.html',{'products':products})
+
+
 def defence_properties(request):
-    products = Products.objects.filter(location="defence")
+    try:
+        products = Products.objects.filter(location="defence")
+    except products.DoesNotExist:
+        raise Http404("Property Does Not Exist")
     return render(request, 'myFYP/myproperties.html',{'products':products})
 
 
@@ -131,7 +156,10 @@ def detail(request ,product_id):
     return render(request, 'myFYP/propertydetail.html',{'product':product})
 
 def properties(request):
-    products = Products.objects.filter(user=request.user)
+    try:
+        products = Products.objects.filter(user=request.user)
+    except Products.DoesNotExist:
+        raise Http404('This products does not exist')
     return render(request, 'myFYP/userProperties.html',{'products':products})
 
 @login_required(login_url='/myFYP/signup/')
