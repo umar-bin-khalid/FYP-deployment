@@ -31,7 +31,6 @@
                         <p>
                             <i class="fa fa-map-marker"></i>{{product.address}},
                         </p>
-                        <h3>Property Uploaded By : {{product.user}}</h3>
                     </div>
                     <div class="pull-right">
                         <h3><span>{{product.price}}</span></h3>
@@ -51,7 +50,7 @@
                                 <div class="carousel-inner">
                                     <div class="item active">
                                         <img src="{{ product.document.url }}"
-                                              height="3" width="710" alt="properties-1">
+                                              style="width:900px;height:500px;" />
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +62,7 @@
                             <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="true">Description</a></li>
                             <li class=""><a href="#tab2default" data-toggle="tab" aria-expanded="false">Condition</a></li>
                             <li class=""><a href="#tabdefault" data-toggle="tab" aria-expanded="false">Location</a></li>
-                            <li class=""><a href="#tab5default" data-toggle="tab" aria-expanded="false">Video</a></li>
+
                         </ul>
                         <div class="panel with-nav-tabs panel-default">
                             <div class="panel-body">
@@ -146,17 +145,7 @@
                                         </div>
                                         <!-- Properties condition end -->
                                     </div>
-                                    <div class="tab-pane fade" id="tab5default">
-                                        <!-- Inside properties start  -->
-                                        <div class="inside-properties">
-                                            <!-- Main Title 2 -->
-                                            <div class="main-title-2">
-                                                <h1><span>Video</span></h1>
-                                            </div>
-                                            <iframe src="https://www.youtube.com/embed/5e0LxrLSzok" allowfullscreen=""></iframe>
-                                        </div>
-                                        <!-- Inside properties end -->
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -173,16 +162,11 @@
                     <div class="social-media sidebar-widget clearfix">
                         <!-- Main Title 2 -->
                         <div class="main-title-2">
-                            <h1><span>Social</span> Media</h1>
+                            <h1><span>Property</span> Uploader</h1>
                         </div>
                         <!-- Social list -->
-                        <ul class="social-list">
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
-                        </ul>
+
+                        <h3>Uploaded By : <b>{{product.user}}</b></h3>
                     </div>
                     <!-- Social media end -->
 
@@ -208,7 +192,9 @@
                                 <div class="col-lg-12">
                                     <div class="form-group enter-email">
                                         <center><label>Dealer Email</label></center>
-                                        <center><h3>{{product.contactEmail}}</h3></center>
+                                        <center><h3>
+                                        <a href="mailto:{{product.contactEmail}}">  {{product.contactEmail}}</a>
+                                        </h3></center>
                                     </div>
                                 </div>
                             </div>

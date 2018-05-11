@@ -14,7 +14,6 @@
         </div>
     </div>
 </div>
-
  <div class="content-area featured-properties">
     <div class="container">
         <!-- Main title -->
@@ -29,6 +28,7 @@
                         <!-- Property img -->
 
                         <a href="{% url 'myFYP:edit' product.id %}" class="property-img">
+                            <div class="property-tag button alt featured">{{ product.location }}</div>
                             <div class="property-tag button alt featured">{{ product.location }}</div>
                             <div class="property-tag button sale">{{ product.status }}</div>
                             <div class="property-price">{{ product.price }}</div>
@@ -81,6 +81,15 @@
                                     <a href="#"><b>{{ product.uploaded_at }}</b></a>
                                 </span>
 
+                            </div>
+
+                            <div class="property-footer">
+                              <span class="right">
+                                <a href="{% url 'myFYP:delete' product.id %}">
+                              <button type="button" class="btn btn-danger">Danger</button>
+                            </a>
+                              <br>
+                            </span>
                             </div>
                         </div>
                     </div>
