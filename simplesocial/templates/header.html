@@ -13,6 +13,7 @@
     <!-- End Google Tag Manager -->
     <title>Estate Merkez </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'myFYP/img/favicon.ico' %}" type="image/ico" sizes="16x16">
     <meta charset="utf-8">
 
     <!-- External CSS libraries -->
@@ -53,7 +54,26 @@
     <script type="text/javascript" src="js/respond.min.js"></script>
     <![endif]-->
 
+<style>
+    .modal {
+  text-align: center;
+  padding: 0!important;
+}
 
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+</style>
 </head>
 
 <body>
@@ -93,12 +113,11 @@
 
 					{% if user.is_authenticated %}
 					  <li>
-              <a href="{% url 'myFYP:logout' %}" class="sign-in"><i class="fa fa-user"></i> Log Out </a>
-              {{request.user.username}}
+              <a href="{% url 'myFYP:logout' %}" class="sign-in"><i class="fa fa-user"></i> Log Out {{request.user.username}} </a>
 
             </li>
             <li>
-            <a href="{%url 'myFYP:properties' %}"" class="sign-in">my Properties </a>
+            <a href="{%url 'myFYP:properties' %}" class="sign-in">my Properties </a>
             </li>
 					{% else %}
 					<li>
@@ -148,7 +167,7 @@
                     </li>
                     <li class="dropdown">
                         <a href="{%url 'myFYP:seeReviews' %}" tabindex="0" data-submenu="" aria-expanded="false">
-                            Locality Reviews
+                            Views about Localities
                         </a>
 
                     </li>
@@ -168,20 +187,36 @@
 
                             <li><a href="{%url 'myFYP:contact' %}">Contact</a></li>
                             <li><a href="{%url 'myFYP:About-Us' %}">About Us</a></li>
-
-                            <li><a href="{%url 'myFYP:localities' %}">Localities</a></li>
-                            <li><a href="{%url 'myFYP:valueAddedServices' %}">Services</a></li>
+                            <li>
+                                {% if not user.is_authenticated %}
+                             {% comment %}   <a href="{%url 'myFYP:localities' %}">Add Locality Review</a>{% endcomment %}
+                                    <a  data-toggle="modal" data-target="#myModal">
+                                Add Locality Review</a>
+                                    {% elif user.is_authenticated %}
+                                        <a href="{%url 'myFYP:localities' %}">Add Locality Review</a>
+                                {% endif %}
+                            </li>
+                            <li>
+                            {% if not user.is_authenticated %}
+                             {% comment %}   <a href="{%url 'myFYP:localities' %}">Add Locality Review</a>{% endcomment %}
+                                    <a  data-toggle="modal" data-target="#myModal">
+                                Services</a>
+                                    {% elif user.is_authenticated %}
+                                        <a href="{%url 'myFYP:valueAddedServices' %}">Services</a>
+                                {% endif %}
+                            </li>
                         </ul>
 
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right rightside-navbar">
                     <li>
-
-                        <a href="{%url 'myFYP:addproperty' %}" class="button">
-                            Submit Property
-                        </a>
-
+                        {% if not user.is_authenticated %}
+                                <a  data-toggle="modal" data-target="#myModal" class="button">
+                                Submit Property</a>
+                            {% elif user.is_authenticated %}
+                                <a href="{%url 'myFYP:addproperty' %} " class="button">Submit Property</a>
+                        {% endif %}
                     </li>
                 </ul>
             </div>
@@ -190,6 +225,27 @@
             <!-- /.container -->
         </nav>
     </div>
+    <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Make sure to login first for this action
+                              if you already have an account on our site then simply go and login to your account</p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="{% url 'myFYP:login' %}">
+                        <center><button type="button" class="btn button-md button-theme" data-animation="animated fadeInUp delay-05s">
+                            <font color="white" >Go for login</font></button></center>
+                      </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
 </header>
 <!-- Main header end -->
 
@@ -251,11 +307,11 @@
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i>
-                                Email:<a href="umar.ubk@gmail.com">umarkhalid1@acm.org</a>
+                                Email:<a href="#">EstateMarkez@hr.com</a>
                             </li>
                             <li>
                                 <i class="fa fa-phone"></i>
-                                Phone: <a href="tel:+55-417-634-7071">0335 4342184</a>
+                                Phone: <a href="tel:+55-417-634-7071">+92 232 47328283</a>
                             </li>
                             <li>
                                 <i class="fa fa-fax"></i>
@@ -272,13 +328,13 @@
                         </div>
                         <ul class="links">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <a href="about.html">About Us</a>
+                                <a href="{%url 'myFYP:About-Us' %}">About Us</a>
                             </li>
                             <li>
-                                <a href="contact.html">Contact Us</a>
+                                <a href="{%url 'myFYP:contact' %}">Contact Us</a>
                             </li>
                         </ul>
                     </div>
