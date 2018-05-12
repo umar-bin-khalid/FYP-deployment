@@ -18,7 +18,9 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Properties</h1>
+          {% if user.is_authenticated %}
+            <h1> properties of  {{ user.get_username }}  </h1>
+            {% endif %}
         </div>
         <div class="row">
             <div class="filtr-container">
@@ -27,7 +29,7 @@
                     <div class="property">
                         <!-- Property img -->
 
-                        <a href="{% url 'myFYP:edit' product.id %}" class="property-img">
+                        <a href="{% url 'myFYP:detail' product.id %}" class="property-img">
                             <div class="property-tag button alt featured">{{ product.location }}</div>
                             <div class="property-tag button alt featured">{{ product.location }}</div>
                             <div class="property-tag button sale">{{ product.status }}</div>
@@ -38,7 +40,7 @@
                         <div class="property-content">
                             <!-- title -->
                             <h1 class="title">
-                                <a href="{% url 'myFYP:edit' product.id %}">{{ product.propertyTitle }}</a>
+                                <a href="{% url 'myFYP:detail' product.id %}">{{ product.propertyTitle }}</a>
                             </h1>
                             <!-- Property address -->
                             <h4 class="property-address">
@@ -85,18 +87,47 @@
 
                             <div class="property-footer">
                               <span class="right">
-                                <a href="{% url 'myFYP:delete' product.id %}">
-                              <button type="button" class="btn btn-danger">Danger</button>
-                            </a>
+                                <button type="button" class="btn" style="background-color: #830e0a" data-toggle="modal" data-target="#myModal">
+                                    <font color="white">delete</font> </button>
+                            <a href="{% url 'myFYP:edit' product.id %}">
+                          <button type="button" class="btn btn-warning">Edit</button>
+                        </a>
                               <br>
                             </span>
+                            </div>
+                            <div class="property-footer">
+
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Delete Property</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>Are you sure you want to delete this property ? </p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="{% url 'myFYP:delete' product.id %}">
+                        <button type="button" class="btn " style="background-color: #830e0a">
+                            <font color="white" >Delete it</font></button>
+                      </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
             {% endfor %}
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

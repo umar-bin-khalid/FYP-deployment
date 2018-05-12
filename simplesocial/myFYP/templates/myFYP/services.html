@@ -31,7 +31,7 @@
           <th>Service</th>
           <th>email</th>
           <th>profile Link</th>
-          <th>Image</th>
+          <th>Image</t>
           <th style="width: 36px;"></th>
         </tr>
       </thead>
@@ -42,8 +42,12 @@
           <td>{{vs.user.username}}</td>
           <td>{{vs.type}}</td>
 
-          <td>{{vs.user.email}}</td>
-          <td>{{vs.portfolio_site}}</td>
+          <td>
+            <a  href="mailto:{{vs.user.email}}" target="_blank">{{vs.user.email}}</a>
+          </td>
+          <td>
+            <a  href="{{vs.portfolio_site}}" target="_blank">{{vs.portfolio_site}}</a>
+          </td>
           <td>
             <img src = "{{ vs.profile_pic.url }}" alt="properties-1"  height="50" width="50">
           </td>
