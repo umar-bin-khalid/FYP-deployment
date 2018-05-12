@@ -4,11 +4,13 @@ from django.core.urlresolvers import reverse_lazy
 from django.views.generic import CreateView,TemplateView
 from myFYP.models import Products,Localities,Contact,UserProfileInfo, User
 from myFYP.forms import ProductForm,LocalitiesForm,contactForm, UserForm, UserProfileInfoForm
+from django.shortcuts import get_object_or_404, redirect, reverse
 from . import forms
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 from django.core.mail import send_mail, BadHeaderError, EmailMessage
-from django.http import Http404
+from django.contrib.messages import constants as messages
+from django.http import HttpResponseForbidden, HttpResponseRedirect, Http404, HttpResponseNotFound, HttpResponse
 
 
 class Nointernet(TemplateView):
@@ -102,6 +104,13 @@ def addproperty(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
+            current_user = request.user
+            emailad = current_user.email
+            email = EmailMessage('Property Added ', 'You have just uploaded a property on our site EstateMerkez.com',
+                                 'estatemerkez@gmail.com',
+                                 [emailad],
+                                 reply_to=['estatemerkez@gmail.com'])
+            email.send()
             form.save()
             return myproperties(request)
     else:
@@ -109,6 +118,7 @@ def addproperty(request):
     return render(request, 'myFYP/submit-property.html', {
         'form': form
     })
+
 
 def myproperties(request):
     try:
@@ -152,7 +162,7 @@ def detail(request ,product_id):
     try:
         product = Products.objects.get(id=product_id)
     except Products.DoesNotExist:
-        raise Http404('This products does not exist')
+        return render(request, 'myFYP/404.html')
     return render(request, 'myFYP/propertydetail.html',{'product':product})
 
 def properties(request):
@@ -163,38 +173,27 @@ def properties(request):
     return render(request, 'myFYP/userProperties.html',{'products':products})
 
 @login_required(login_url='/myFYP/signup/')
-def edit(request,product_id=None):
-    instance = get_object_or_404(Products , id = product_id)
-    form = ProductForm(request.POST or None,request.FILES,instance=instance)
-    if form.is_valid():
-        instance = form.save(commit=False)
-        instance.save()
-        return detail(request ,product_id)
-    context = {
-        "instance" : instance,
-        "form" : form,
-    }
-    return render(request, "myFyp/submit-property.html", context)
+def edit(request,pk):
+    template = 'myFYP/submit-property.html'
+    products = get_object_or_404(Products, pk=pk)
 
-"""
-    try:
-            #product = Products.objects.get(id=product_id)
-        instance = Products.objects.get(id=prop_id)
-        form = ProductForm(request.POST or None, request.FILES, instance=instance)
-        if form.is_valid():
-            instance = form.save(commit=False)
-            instance.save()
-            return properties(request)
-        context = {
-            "instance":instance,
-            "form":form
-        }
-        return render(request, 'myFYP/update_form.html', context)
-    except Products.DoesNotExist:
-            raise Http404('This products does not exist')
-"""
-#def edit(request):
-#    return render(request, 'myFYP/contact.html')
+    if request.method == 'POST':
+        form = ProductForm(request.POST,request.FILES, instance=products)
+
+        try:
+            if form.is_valid():
+                form.save()
+                return properties(request)
+        except Exception as e:
+            messages.warning(request,'your post not saved as an error : {}'.format(e));
+    else:
+        form = ProductForm(instance=products)
+
+    context = {
+        'form' : form,
+        'products' : products,
+    }
+    return render(request, template, context)
 
 @login_required(login_url='/myFYP/signup/')
 def localities(request):
@@ -216,6 +215,7 @@ def seeReviews(request):
 def mustafaTown(request):
     reviews = Localities.objects.filter(location="mustafa town")
     return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
 def iqbalTown_rev(request):
     reviews = Localities.objects.filter(location="iqbal town")
     return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
@@ -228,6 +228,24 @@ def joharTown_rev(request):
 def defence_rev(request):
     reviews = Localities.objects.filter(location="defence")
     return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
+
+def awan_rev(request):
+    reviews = Localities.objects.filter(location="awan town")
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
+def wapda_Rev(request):
+    reviews = Localities.objects.filter(location="wapda town")
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
+def eden_rev(request):
+    reviews = Localities.objects.filter(location="eden")
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
+def lake_rev(request):
+    reviews = Localities.objects.filter(location="lake city")
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
 
 
 def register(request):

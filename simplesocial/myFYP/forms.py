@@ -4,6 +4,8 @@ from myFYP.models import Products, Localities, Contact
 from myFYP.models import UserProfileInfo
 from django.contrib.auth.models import User
 from django import forms
+from django.core.validators import MinValueValidator,MaxValueValidator
+
 class UserCreateForm(UserCreationForm):
     class Meta:
         fields = ("username", "email", "password1", "password2")
@@ -33,10 +35,11 @@ class UserProfileInfoForm(forms.ModelForm):
 
 class ProductForm(forms.ModelForm):
     description = forms.CharField( widget=forms.Textarea)
-    Rooms = forms.CharField(label='Rooms',
+    Rooms = forms.IntegerField(label='Rooms',
                     widget=forms.TextInput(attrs={'placeholder': 'No of Rooms'}))
-    BathRooms = forms.CharField(label='BathRooms',
+    BathRooms = forms.IntegerField(label='BathRooms',
                     widget=forms.TextInput(attrs={'placeholder': 'No of BathRooms'}))
+
     class Meta():
         model = Products
         fields = '__all__'
@@ -45,7 +48,7 @@ class ProductForm(forms.ModelForm):
 class contactForm(forms.ModelForm):
     Message = forms.CharField( label='Entre Your Message along with your email:',
                               widget=forms.Textarea(attrs={'placeholder': 'Enter here...'}))
-    email = forms.EmailField()                          
+    email = forms.EmailField()
     class Meta():
         model = Contact
         fields = '__all__'
@@ -54,25 +57,25 @@ class contactForm(forms.ModelForm):
 
 
 class LocalitiesForm(forms.ModelForm):
-    rate_cleanliness = forms.CharField(
+    rate_cleanliness = forms.IntegerField(min_value=0, max_value=10,
         label='Rate Cleanliness',
-        widget=forms.TextInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
     )
-    rate_locality = forms.CharField(
+    rate_locality = forms.IntegerField(min_value=0, max_value=10,
         label='Rate locality',
-        widget=forms.TextInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
     )
-    rate_security = forms.CharField(
+    rate_security = forms.IntegerField(min_value=0, max_value=10,
         label='Rate security',
-        widget=forms.TextInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
     )
-    rate_parks = forms.CharField(
+    rate_parks = forms.IntegerField(min_value=0, max_value=10,
         label='Rate parks',
-        widget=forms.TextInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
     )
-    playGrounds = forms.CharField(
+    playGrounds = forms.IntegerField(min_value=0, max_value=10,
         label='Rate playGrounds',
-        widget=forms.TextInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
     )
     class Meta:
         model = Localities

@@ -6,6 +6,7 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django_userforeignkey.models.fields import UserForeignKey
 
+
 '''
 class User(auth.models.User, auth.models.PermissionsMixin):
 
@@ -55,9 +56,11 @@ class Products(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=30, choices=status_option, default='sale')
     price = models.CharField(max_length=100)
-    Rooms  = models.CharField(max_length=100)
+    Rooms  = models.IntegerField()
+    BathRooms  = models.IntegerField()
+    address = models.CharField(max_length=200)
     city = models.CharField(max_length=100)
-    postalCode = models.CharField(max_length=100)
+    postalCode = models.IntegerField()
     buildingAge = models.CharField(max_length=100)
     freeParking = models.CharField(max_length=30, choices=select_option, default='yes')
     swimmingPool = models.CharField(max_length=30, choices=select_option, default='yes')
@@ -79,12 +82,12 @@ class Localities(models.Model):
         ('johar town', 'johar town'),
         ('defence', 'defence'),
     )
-    location = models.CharField(max_length=30 , choices=locations_choice, default='mustafa town')
-    rate_locality = models.CharField(max_length=20)
-    rate_cleanliness = models.CharField(max_length=20)
-    rate_security = models.CharField(max_length=20)
-    rate_parks = models.CharField(max_length=20)
-    playGrounds = models.CharField(max_length=20)
+    location = models.CharField(max_length=136, choices=locations_choice, default='johar town')
+    rate_locality = models.IntegerField()
+    rate_cleanliness = models.IntegerField()
+    rate_security = models.IntegerField()
+    rate_parks = models.IntegerField()
+    playGrounds = models.IntegerField()
 
     def __str__(self):
         return self.location
