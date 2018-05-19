@@ -113,8 +113,8 @@
 
 					{% if user.is_authenticated %}
 					  <li>
-              <a href="{% url 'myFYP:logout' %}" class="sign-in"><i class="fa fa-user"></i> Log Out {{request.user.username}} </a>
-
+              <a href="{% url 'myFYP:logout' %}" class="sign-in"><i class="fa fa-user"></i> Log Out  </a>
+              {{request.user.username}}
             </li>
             <li>
             <a href="{%url 'myFYP:properties' %}" class="sign-in">my Properties </a>
@@ -167,7 +167,7 @@
                     </li>
                     <li class="dropdown">
                         <a href="{%url 'myFYP:seeReviews' %}" tabindex="0" data-submenu="" aria-expanded="false">
-                            Views about Localities
+                            Locality Reviews
                         </a>
 
                     </li>
@@ -213,9 +213,9 @@
                     <li>
                         {% if not user.is_authenticated %}
                                 <a  data-toggle="modal" data-target="#myModal" class="button">
-                                Submit Property</a>
+                                Add Property</a>
                             {% elif user.is_authenticated %}
-                                <a href="{%url 'myFYP:addproperty' %} " class="button">Submit Property</a>
+                                <a href="{%url 'myFYP:addproperty' %} " class="button">Add Property</a>
                         {% endif %}
                     </li>
                 </ul>
@@ -233,8 +233,8 @@
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-                          <p>Make sure to login first for this action
-                              if you already have an account on our site then simply go and login to your account</p>
+                          <p>Make sure to login first for this action. <br>
+                              If you already have an account on our site then simply go and login to your account</p>
                         </div>
                         <div class="modal-footer">
                           <a href="{% url 'myFYP:login' %}">
@@ -245,7 +245,7 @@
                       </div>
 
                     </div>
-                  </div>
+      </div>
 </header>
 <!-- Main header end -->
 

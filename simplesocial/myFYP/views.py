@@ -45,7 +45,7 @@ def contact(request):
             #form = [message,'Phone_Number',Phone_Number, 'name',name]
             email = EmailMessage(subject,message,
                                      from_email,
-                                     ['umar.ubk@gmail.com'],
+                                     ['estatemerkez@gmail.com'],
                                      reply_to=[from_email])
             email.send()
 

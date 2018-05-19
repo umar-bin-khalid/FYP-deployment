@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 	'widget_tweaks',
     'django_userforeignkey',
     'driver',
+    'aarzdriver',
     'pyAarz',
     'ZameenScraper',
 ]
@@ -128,8 +129,8 @@ USE_TZ = True
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'smackburg@gmail.com'
-EMAIL_HOST_PASSWORD = 'talha12345'
+EMAIL_HOST_USER = 'estatemerkez@gmail.com'
+EMAIL_HOST_PASSWORD = 'heythere123>>'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

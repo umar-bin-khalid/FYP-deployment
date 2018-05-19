@@ -11,12 +11,18 @@
                   <div class="form-content-box">
                       <!-- details -->
                       <div class="details">
-    <h1>Login</h1>
+    <h1>Login To EstateMerkez</h1>
+    <br>
     <form method="POST">
         {% csrf_token %}
         {% bootstrap_form form %}
-        <input type="submit" value="Login" class="btn btn-default">
+        <input type="submit" value="Login" class="btn button-md button-theme">
     </form>
+<br>
+<br>
+<br>
+    <p>Don't have an account ? <a color="green" href="{%url 'myFYP:signup' %}">Register Yourself</a> </p>
+
   </div>
   </div>
   </div>

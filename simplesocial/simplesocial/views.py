@@ -1,37 +1,68 @@
 from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from requests.exceptions import ConnectionError
 import driver
+import aarzdriver
 import json
 
 def request_page(request):
-    try:
 
-        loc = str(request.GET.get('locations'))
+    zcheck = str(request.GET.get('website'))
+    if ( zcheck == "Zameen"):
 
-        with open('zameenlocations.json') as f:
-            data = json.load(f)
-            final = data[loc]["link"]
+        try:
 
-        arr = {}
-        pur = str(request.GET.get('mytextbox'))
+            loc = str(request.GET.get('locations'))
 
-        if( pur == "Buy"):
-            purpose = 0
-        if(pur == "Rent"):
-            purpose = 1
+            with open('zameenlocations.json') as f:
+                data = json.load(f)
+                final = data[loc]["link"]
 
-        if(request.GET.get('mybtn')):
-            arr = driver.mypythonfunction( str(final),int(request.GET.get('myminbox')),int(request.GET.get('mymaxbox')), purpose )
-            res = {'house_records':arr}
+            arr = {}
+            pur = str(request.GET.get('mytextbox'))
 
-        return render(request,'home.html',context=res)
-    except ConnectionError as e:
-        # This is the correct syntax
-        print (e)
-        return HttpResponse("No internet Connection")
+            if( pur == "Buy"):
+                purpose = 0
+            if(pur == "Rent"):
+                purpose = 1
+
+            if(request.GET.get('mybtn')):
+                arr = driver.mypythonfunction( str(final),int(request.GET.get('myminbox')),int(request.GET.get('mymaxbox')), purpose )
+                res = {'house_records':arr}
+
+            return render(request,'home.html',context=res)
+        except ConnectionError as e:
+            # This is the correct syntax
+            print (e)
+            return HttpResponseRedirect("/myFYP/nointernet/")
+    else:
+
+        try:
+
+
+            arr1 = {}
+            pur1 = str(request.GET.get('mytextbox'))
+
+            if( pur1 == "Buy"):
+                purpose1 = 0
+            if(pur1 == "Rent"):
+                purpose1 = 1
+
+            if(request.GET.get('mybtn')):
+                arr1 = aarzdriver.mypythonfunction( str(request.GET.get('locations')),int(request.GET.get('myminbox')),int(request.GET.get('mymaxbox')), purpose1 )
+                res1 = {'aarzhouse_records':arr1}
+                print(res1)
+            return render(request,'home.html',context=res1)
+            
+        except ConnectionError as e:
+            # This is the correct syntax
+            print (e)
+            return HttpResponseRedirect("/myFYP/nointernet/")
+
+
+
 
 
 class TestPage(TemplateView):
