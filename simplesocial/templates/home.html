@@ -201,18 +201,37 @@
                             {% if  aarzhouse_records %}
                                 {% for k,v in aarzhouse_records.items  %}
 
-
+                                <div class="col-lg-12 col-md-12 filtr-item" data-category="1, 2, 3">
+                                    <div class="property">
+                                    <div class="col-md-3">
+                                        <img src="{% static 'myFYP/images/aarz.png' %}" style="width:200px;height:350px;" >
+                                    </div>
+                                    <div class="col-md-8">
+                                    &nbsp;&nbsp;
                                     {% for i,j in v.items %}
 
+                                    {% comment %}<div class="col-md-1"></div>{% endcomment %}
 
-                                  {% if i == "link" %}
-                                      <h3><a href="{{ j }}" target="_blank">Property link </a></h3>
+                                            {% if i == "link" %}
+                                              <h3><a class="btn button-md button-theme" data-animation="animated fadeInUp delay-05s" href="{{ j }}" target="_blank">Property link </a></h3>
 
+                                            {% endif %}
+
+                                      {% if i == "title" %}
+                                      <h1>
+                                      <font color="#95C41F" >Title:{{ j }} </font>
+                                      </h1>
+                                      {% endif %}
+
+                                      {% if i == "price" %}
+                                        <h3><b>price:{{ j }}</b></h3>
                                       {% endif %}
 
                                     {% endfor %}
 
-
+                                  </div>
+                               </div>
+                               </div>
 
                                 {% endfor %}
                         {% endif %}
