@@ -1,36 +1,42 @@
-{% extends "header.html" %}
+{% extends "header.html"%}
+{% load staticfiles %}
 {% load bootstrap3 %}
+ {% block content %}
 
-{% block content %}
-<div class="container">
-  <div class="content-area">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                  <!-- Form content box start -->
-                  <div class="form-content-box">
-                      <!-- details -->
-                      <div class="details">
-    <h1>Login To EstateMerkez</h1>
-    <br>
-    <form method="POST">
-        {% csrf_token %}
-        {% bootstrap_form form %}
-        <input type="submit" value="Login" class="btn button-md button-theme">
-    </form>
-<br>
-<br>
-<br>
-    <p>Don't have an account ? <a color="green" href="{%url 'myFYP:signup' %}">Register Yourself</a> </p>
+<!-- Content area start -->
+<div class="content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Form content box start -->
+                <div class="form-content-box">
+                    <!-- details -->
+                    <div class="details">
+                        <!-- Main title -->
+                        <div class="main-title">
+                            <h1><span>Login</span></h1>
+                        </div>
+                        <!-- Form start -->
+          <form method="post" action="">
 
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-<br>
-<br>
-<br>
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          <input type="submit" value="Login" class="btn btn-default">
+
+        </form>
+                        <!-- Form end -->
+                    </div>
+                    <!-- Footer -->
+                    <div class="footer">
+                        <span>
+                            Don't have an account yet? <a href="{% url 'myFYP:signup' %}">Sign up now</a>
+                        </span>
+                    </div>
+                </div>
+                <!-- Form content box end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content area end -->
 {% endblock %}
