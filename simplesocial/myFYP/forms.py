@@ -28,9 +28,7 @@ class UserForm(forms.ModelForm):
 class UserProfileInfoForm(forms.ModelForm):
     class Meta:
         model = UserProfileInfo
-        fields = ('portfolio_site','profile_pic','type')
-
-
+        fields = ('profile_pic','type')
 
 
 class ProductForm(forms.ModelForm):
@@ -57,25 +55,25 @@ class contactForm(forms.ModelForm):
 
 
 class LocalitiesForm(forms.ModelForm):
-    rate_cleanliness = forms.IntegerField(min_value=0, max_value=10,
+    rate_cleanliness = forms.IntegerField(min_value=0, max_value=5,
         label='Rate Cleanliness',
-        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 5'})
     )
-    rate_locality = forms.IntegerField(min_value=0, max_value=10,
+    rate_locality = forms.IntegerField(min_value=0, max_value=5,
         label='Rate locality',
-        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 5'})
     )
-    rate_security = forms.IntegerField(min_value=0, max_value=10,
+    rate_security = forms.IntegerField(min_value=0, max_value=5,
         label='Rate security',
-        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 5'})
     )
-    rate_parks = forms.IntegerField(min_value=0, max_value=10,
+    rate_parks = forms.IntegerField(min_value=0, max_value=5,
         label='Rate parks',
-        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 5'})
     )
-    playGrounds = forms.IntegerField(min_value=0, max_value=10,
+    playGrounds = forms.IntegerField(min_value=0, max_value=5,
         label='Rate playGrounds',
-        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 10'})
+        widget=forms.NumberInput(attrs={'placeholder': 'Rate out of 5'})
     )
     class Meta:
         model = Localities

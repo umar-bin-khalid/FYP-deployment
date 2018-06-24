@@ -55,7 +55,7 @@ def request_page(request):
                 res1 = {'aarzhouse_records':arr1}
                 print(res1)
             return render(request,'home.html',context=res1)
-            
+
         except ConnectionError as e:
             # This is the correct syntax
             print (e)

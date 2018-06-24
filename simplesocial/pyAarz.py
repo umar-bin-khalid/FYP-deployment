@@ -126,8 +126,8 @@ class Aarz:
 
             bedsnbath = info_div.find('div', attrs={'class': 'property-features'}).text.strip().split(" ")
 
-            single['beds'] = int(bedsnbath[1].strip())
-            single['bath'] = int(bedsnbath[-1])
+            # single['beds'] = int(bedsnbath[1].strip())
+            # single['bath'] = int(bedsnbath[-1])
 
             try:
                 single['description'] = info_div.find('div', attrs={'class': 'text-muted property-desc'}).p.text.strip()

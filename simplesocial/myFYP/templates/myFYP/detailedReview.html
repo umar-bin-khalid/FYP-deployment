@@ -5,10 +5,10 @@
     <div class="overlay">
         <div class="container">
             <div class="breadcrumb-area">
-                <h1>Service Providers</h1>
+                <h1>REVIEWS OF LOCALITY</h1>
                 <ul class="breadcrumbs">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Service Providers</li>
+                    <li class="active">REVIEWS OF LOCALITY</li>
                 </ul>
             </div>
         </div>
@@ -19,7 +19,7 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Reviews Of Locality</h1>
+            <h1>Overall {{Name.average}} Average rating of this location: {{ average.average }}</h1>
         </div>
         <div class="row">
             <div class="filtr-container">
@@ -27,13 +27,13 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Location</th>
-          <th>Locality rating</th>
-          <th>Cleanliness Rating</th>
-          <th>Security Rating</th>
-          <th>Parks Rating</th>
-          <th>play grounds Rating</th>
-          <th style="width: 36px;"></th>
+          <th>Location<p></p></th>
+          <th>Locality <p style="color : green">(avg ≈ {{ average.average }})</p></th>
+          <th>Cleanliness <p style="color : green">(avg ≈ {{ cleanliness.cleanliness }})</p></th>
+          <th>Security <p style="color : green">(avg ≈ {{ security.security }})</p></th>
+          <th>Parks <p style="color : green">(avg ≈ {{ parks.parks }})</p></th>
+          <th>play grounds <p style="color : green">(avg ≈ {{ playgrounds.playgrounds }})</p></th>
+
         </tr>
       </thead>
       <tbody>
@@ -41,15 +41,15 @@
         {% for rev in reviews %}
         <tr>
           <td>
-            {{rev.location}}
+            <b>{{rev.location}}</b>
         </td>
-          <td>{{ rev.rate_locality }} / 10
+          <td>{{ rev.rate_locality }} out of 5
 
           </td>
-          <td>{{ rev.rate_cleanliness }} / 10</td>
-          <td>{{ rev.rate_security }} / 10</td>
-          <td>{{rev.rate_parks}} / 10</td>
-          <td>{{rev.playGrounds}} / 10</td>
+          <td>{{ rev.rate_cleanliness }} out of 5</td>
+          <td>{{ rev.rate_security }} out of 5</td>
+          <td>{{rev.rate_parks}} out of 5</td>
+          <td>{{rev.playGrounds}} out of 5</td>
         </tr>
         {% endfor %}
       </tbody>

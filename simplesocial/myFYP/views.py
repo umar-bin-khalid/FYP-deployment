@@ -11,7 +11,7 @@ from django.shortcuts import get_object_or_404
 from django.core.mail import send_mail, BadHeaderError, EmailMessage
 from django.contrib.messages import constants as messages
 from django.http import HttpResponseForbidden, HttpResponseRedirect, Http404, HttpResponseNotFound, HttpResponse
-
+from django.db.models import Avg, IntegerField
 
 class Nointernet(TemplateView):
     template_name = "myFYP/nointernet.html"
@@ -90,8 +90,8 @@ class Services(TemplateView):
 
     template_name = "myFYP/vas.html"
 
-class Main_login(TemplateView):
-    template_name = "myFYP/main_login.html"
+# class Main_login(TemplateView):
+#     template_name = "myFYP/main_login.html"
 
 @login_required(login_url='/myFYP/signup/')
 def valueAddedServices(request):
@@ -210,42 +210,157 @@ def localities(request):
     return render(request, 'myFYP/addLocality.html',{'form': form})
 
 def seeReviews(request):
-    return render(request, 'myFYP/localities.html')
+    reviews1 = Localities.objects.filter(location="mustafa town")
+    average1 = reviews1.aggregate(average1=Avg('rate_locality' , output_field=IntegerField()))
+
+    reviews2 = Localities.objects.filter(location="johar town")
+    average2 = reviews2.aggregate(average2=Avg('rate_locality', output_field=IntegerField()))
+
+    reviews3 = Localities.objects.filter(location="iqbal town")
+    average3 = reviews3.aggregate(average3=Avg('rate_locality', output_field=IntegerField()))
+
+    reviews4 = Localities.objects.filter(location="defence")
+    average4 = reviews4.aggregate(average4=Avg('rate_locality', output_field=IntegerField()))
+
+    reviews5 = Localities.objects.filter(location="Awan town")
+    average5 = reviews5.aggregate(average5=Avg('rate_locality', output_field=IntegerField()))
+
+    reviews6 = Localities.objects.filter(location="Wapda town")
+    average6 = reviews6.aggregate(average6=Avg('rate_locality', output_field=IntegerField()))
+
+    reviews7 = Localities.objects.filter(location="Eden")
+    average7 = reviews7.aggregate(average7=Avg('rate_locality', output_field=IntegerField()))
+
+    reviews8 = Localities.objects.filter(location="Lake city")
+    average8 = reviews8.aggregate(average8=Avg('rate_locality', output_field=IntegerField()))
+
+
+    return render(request, 'myFYP/localities.html',{'average1' : average1 , 'average2' : average2 ,
+                                                    'average3' : average3 , 'average4' : average4 ,
+                                                    'average5' : average5 , 'average6' : average6 ,
+                                                    'average7' : average7 , 'average8' : average8 ,
+                                                    })
 
 def mustafaTown(request):
     reviews = Localities.objects.filter(location="mustafa town")
-    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
+    average = reviews.aggregate(average=Avg('rate_locality', output_field=IntegerField()))
+    parks = reviews.aggregate(parks=Avg('rate_parks', output_field=IntegerField()))
+    security = reviews.aggregate(security=Avg('rate_security', output_field=IntegerField()))
+    cleanliness = reviews.aggregate(cleanliness=Avg('rate_cleanliness', output_field=IntegerField()))
+    playgrounds = reviews.aggregate(playgrounds=Avg('playGrounds', output_field=IntegerField()))
+
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews , 'average' : average ,
+                                                        'parks' : parks, 'security' : security,
+                                                        'cleanliness' : cleanliness,
+                                                        'playgrounds' : playgrounds
+                                                        })
 
 def iqbalTown_rev(request):
     reviews = Localities.objects.filter(location="iqbal town")
-    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
+    average = reviews.aggregate(average=Avg('rate_locality', output_field=IntegerField()))
+    parks = reviews.aggregate(parks=Avg('rate_parks', output_field=IntegerField()))
+    security = reviews.aggregate(security=Avg('rate_security', output_field=IntegerField()))
+    cleanliness = reviews.aggregate(cleanliness=Avg('rate_cleanliness', output_field=IntegerField()))
+    playgrounds = reviews.aggregate(playgrounds=Avg('playGrounds', output_field=IntegerField()))
+
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews , 'average' : average ,
+                                                        'parks' : parks, 'security' : security,
+                                                        'cleanliness' : cleanliness,
+                                                        'playgrounds' : playgrounds
+                                                        })
 
 def joharTown_rev(request):
     reviews = Localities.objects.filter(location="johar town")
-    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+
+    average = reviews.aggregate(average=Avg('rate_locality', output_field=IntegerField()))
+    parks = reviews.aggregate(parks=Avg('rate_parks', output_field=IntegerField()))
+    security = reviews.aggregate(security=Avg('rate_security', output_field=IntegerField()))
+    cleanliness = reviews.aggregate(cleanliness=Avg('rate_cleanliness', output_field=IntegerField()))
+    playgrounds = reviews.aggregate(playgrounds=Avg('playGrounds', output_field=IntegerField()))
+
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews , 'average' : average ,
+                                                        'parks' : parks, 'security' : security,
+                                                        'cleanliness' : cleanliness,
+                                                        'playgrounds' : playgrounds
+                                                        })
 
 
 def defence_rev(request):
     reviews = Localities.objects.filter(location="defence")
-    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
 
+    average = reviews.aggregate(average=Avg('rate_locality', output_field=IntegerField()))
+    parks = reviews.aggregate(parks=Avg('rate_parks', output_field=IntegerField()))
+    security = reviews.aggregate(security=Avg('rate_security', output_field=IntegerField()))
+    cleanliness = reviews.aggregate(cleanliness=Avg('rate_cleanliness', output_field=IntegerField()))
+    playgrounds = reviews.aggregate(playgrounds=Avg('playGrounds', output_field=IntegerField()))
+
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews , 'average' : average ,
+                                                        'parks' : parks, 'security' : security,
+                                                        'cleanliness' : cleanliness,
+                                                        'playgrounds' : playgrounds
+                                                        })
 
 def awan_rev(request):
-    reviews = Localities.objects.filter(location="awan town")
-    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+    reviews = Localities.objects.filter(location="Awan town")
+
+    average = reviews.aggregate(average=Avg('rate_locality', output_field=IntegerField()))
+    parks = reviews.aggregate(parks=Avg('rate_parks', output_field=IntegerField()))
+    security = reviews.aggregate(security=Avg('rate_security', output_field=IntegerField()))
+    cleanliness = reviews.aggregate(cleanliness=Avg('rate_cleanliness', output_field=IntegerField()))
+    playgrounds = reviews.aggregate(playgrounds=Avg('playGrounds', output_field=IntegerField()))
+
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews , 'average' : average ,
+                                                        'parks' : parks, 'security' : security,
+                                                        'cleanliness' : cleanliness,
+                                                        'playgrounds' : playgrounds
+                                                        })
 
 def wapda_Rev(request):
-    reviews = Localities.objects.filter(location="wapda town")
-    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+    reviews = Localities.objects.filter(location="Wapda town")
+
+    average = reviews.aggregate(average=Avg('rate_locality', output_field=IntegerField()))
+    parks = reviews.aggregate(parks=Avg('rate_parks', output_field=IntegerField()))
+    security = reviews.aggregate(security=Avg('rate_security', output_field=IntegerField()))
+    cleanliness = reviews.aggregate(cleanliness=Avg('rate_cleanliness', output_field=IntegerField()))
+    playgrounds = reviews.aggregate(playgrounds=Avg('playGrounds', output_field=IntegerField()))
+
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews , 'average' : average ,
+                                                        'parks' : parks, 'security' : security,
+                                                        'cleanliness' : cleanliness,
+                                                        'playgrounds' : playgrounds
+                                                        })
 
 def eden_rev(request):
-    reviews = Localities.objects.filter(location="eden")
-    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+    reviews = Localities.objects.filter(location="Eden")
+
+    average = reviews.aggregate(average=Avg('rate_locality', output_field=IntegerField()))
+    parks = reviews.aggregate(parks=Avg('rate_parks', output_field=IntegerField()))
+    security = reviews.aggregate(security=Avg('rate_security', output_field=IntegerField()))
+    cleanliness = reviews.aggregate(cleanliness=Avg('rate_cleanliness', output_field=IntegerField()))
+    playgrounds = reviews.aggregate(playgrounds=Avg('playGrounds', output_field=IntegerField()))
+
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews , 'average' : average ,
+                                                        'parks' : parks, 'security' : security,
+                                                        'cleanliness' : cleanliness,
+                                                        'playgrounds' : playgrounds
+                                                        })
 
 def lake_rev(request):
-    reviews = Localities.objects.filter(location="lake city")
-    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews})
+    reviews = Localities.objects.filter(location="Lake city")
 
+    average = reviews.aggregate(average=Avg('rate_locality', output_field=IntegerField()))
+    parks = reviews.aggregate(parks=Avg('rate_parks', output_field=IntegerField()))
+    security = reviews.aggregate(security=Avg('rate_security', output_field=IntegerField()))
+    cleanliness = reviews.aggregate(cleanliness=Avg('rate_cleanliness', output_field=IntegerField()))
+    playgrounds = reviews.aggregate(playgrounds=Avg('playGrounds', output_field=IntegerField()))
+
+    return render(request, 'myFYP/detailedReview.html',{'reviews': reviews , 'average' : average ,
+                                                        'parks' : parks, 'security' : security,
+                                                        'cleanliness' : cleanliness,
+                                                        'playgrounds' : playgrounds
+                                                        })
 
 
 def register(request):

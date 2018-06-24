@@ -121,7 +121,7 @@
             </li>
 					{% else %}
 					<li>
-              <a href="{% url 'myFYP:main_login' %}" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
+              <a href="{% url 'myFYP:login' %}" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
           </li>
           <li>
               <a href="{% url 'myFYP:signup' %}" class="sign-in"><i class="fa fa-user"></i> Register</a>
@@ -270,12 +270,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4  col-md-4 col-sm-5 col-xs-12">
-                    <form action="#" method="GET">
-                        <input type="text" class="form-contact" name="email" placeholder="Enter your email">
-                        <button type="submit" name="submitNewsletter" class="btn btn-default button-small">
-                            <i class="fa fa-paper-plane"></i>
-                        </button>
-                    </form>
+
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                     <ul class="social-list clearfix">
@@ -313,10 +308,7 @@
                                 <i class="fa fa-phone"></i>
                                 Phone: <a href="tel:+55-417-634-7071">+92 232 47328283</a>
                             </li>
-                            <li>
-                                <i class="fa fa-fax"></i>
 
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -340,56 +332,7 @@
                     </div>
                 </div>
 
-                <!-- Recent cars -->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="footer-item popular-posts">
-                        <div class="main-title-2">
-                            <h1>popular posts</h1>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <img class="media-object" src="{% static 'myFYP/img/properties/small-properties-1.jpg' %}" alt="small-properties-1">
-                            </div>
-                            <div class="media-body">
-                                <h3 class="media-heading">
-                                    <a href="#">Modern Design Building</a>
-                                </h3>
-                                <p>21 October, 2016</p>
-                                <div class="comments-icon">
-                                    <i class="fa fa-comments"></i>45 comments
-                                </div>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <img class="media-object" src="{% static 'myFYP/img/properties/small-properties-2.jpg' %}" alt="small-properties-2">
-                            </div>
-                            <div class="media-body">
-                                <h3 class="media-heading">
-                                    <a href="#">Real Eatate Expo 2016</a>
-                                </h3>
-                                <p>10 October, 2016</p>
-                                <div class="comments-icon">
-                                    <i class="fa fa-comments"></i>32 comments
-                                </div>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <img class="media-object" src="{% static 'myFYP/img/properties/small-properties-3.jpg' %}" alt="small-properties-3">
-                            </div>
-                            <div class="media-body">
-                                <h3 class="media-heading">
-                                    <a href="#">Construction and Development</a>
-                                </h3>
-                                <p>10 October, 2016</p>
-                                <div class="comments-icon">
-                                    <i class="fa fa-comments"></i>58 comments
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
