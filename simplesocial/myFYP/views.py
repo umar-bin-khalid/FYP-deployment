@@ -106,7 +106,7 @@ def addproperty(request):
         if form.is_valid():
             current_user = request.user
             emailad = current_user.email
-            email = EmailMessage('Property Added ', 'You have just uploaded a property on our site EstateMerkez.com',
+            email = EmailMessage('Property Added ', 'You have just uploaded a property on our site EstateMerkez.com.The charges for per property upload is 500. if you pay this amount then your property will be displayed otherwise this will be removed by the adminself.for payment Contact : 03364738660 ',
                                  'estatemerkez@gmail.com',
                                  [emailad],
                                  reply_to=['estatemerkez@gmail.com'])

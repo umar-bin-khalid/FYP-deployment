@@ -148,7 +148,7 @@ class Aarz:
         try:
             page_info = soup.find('p', attrs={'class': 'text-muted text-center'}).text
         except AttributeError:
-            return 1, 1, listings
+            return listings
 
         # current_page = int(page_info.strip().split(" ")[1])
         # total_pages = int(page_info.strip().split(" ")[-1])

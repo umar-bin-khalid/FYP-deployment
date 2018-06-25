@@ -19,7 +19,7 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Overall {{Name.average}} Average rating of this location: {{ average.average }}</h1>
+            <h1>Overall {{Name.average}} rating of this Location: {{ average.average }}</h1>
         </div>
         <div class="row">
             <div class="filtr-container">
@@ -33,6 +33,8 @@
           <th>Security <p style="color : green">(avg ≈ {{ security.security }})</p></th>
           <th>Parks <p style="color : green">(avg ≈ {{ parks.parks }})</p></th>
           <th>play grounds <p style="color : green">(avg ≈ {{ playgrounds.playgrounds }})</p></th>
+          <th>Description<p></p></th>
+          <th>Review Date<p></p></th>
 
         </tr>
       </thead>
@@ -50,6 +52,8 @@
           <td>{{ rev.rate_security }} out of 5</td>
           <td>{{rev.rate_parks}} out of 5</td>
           <td>{{rev.playGrounds}} out of 5</td>
+          <td>{{rev.description}}</td>
+          <td>{{ rev.uploaded_At }}</td>
         </tr>
         {% endfor %}
       </tbody>

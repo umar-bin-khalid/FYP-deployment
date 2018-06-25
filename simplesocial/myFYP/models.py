@@ -81,6 +81,10 @@ class Localities(models.Model):
         ('iqbal town','iqbal town'),
         ('johar town', 'johar town'),
         ('defence', 'defence'),
+        ('defence', 'defence'),
+        ('Awan town', 'Awan town'),
+        ('Eden', 'Eden'),
+        ('Wapda town', 'Wapda town'),
     )
     location = models.CharField(max_length=136, choices=locations_choice, default='johar town')
     rate_locality = models.IntegerField()
@@ -88,6 +92,8 @@ class Localities(models.Model):
     rate_security = models.IntegerField()
     rate_parks = models.IntegerField()
     playGrounds = models.IntegerField()
+    description = models.CharField(max_length=20000 )
+    uploaded_At = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.location
