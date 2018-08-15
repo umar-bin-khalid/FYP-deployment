@@ -15,7 +15,7 @@ class User(auth.models.User, auth.models.PermissionsMixin):
 '''
 class UserProfileInfo(models.Model):
 
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User,on_delete=models.PROTECT)
 
     # Add any additional attributes you want
     portfolio_site = models.URLField(blank=True)

@@ -1,6 +1,6 @@
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from django.views.generic import CreateView,TemplateView
 from myFYP.models import Products,Localities,Contact,UserProfileInfo, User
 from myFYP.forms import ProductForm,LocalitiesForm,contactForm, UserForm, UserProfileInfoForm
