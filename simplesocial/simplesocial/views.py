@@ -28,13 +28,13 @@ def request_page(request):
                 purpose = 1
 
             if(request.GET.get('mybtn')):
-                arr = driver.mypythonfunction( str(final),int(request.GET.get('myminbox')),int(request.GET.get('mymaxbox')), purpose )
+                arr = driver.mypythonfunction( str(final),float(request.GET.get('myminbox')),float(request.GET.get('mymaxbox')), purpose )
                 res = {'house_records':arr}
 
             return render(request,'home.html',context=res)
         except ConnectionError as e:
             # This is the correct syntax
-            print (e)
+            prfloat (e)
             return HttpResponseRedirect("/myFYP/nointernet/")
     else:
 
@@ -50,7 +50,7 @@ def request_page(request):
                 purpose1 = 1
 
             if(request.GET.get('mybtn')):
-                arr1 = aarzdriver.mypythonfunction( str(request.GET.get('locations')),int(request.GET.get('myminbox')),int(request.GET.get('mymaxbox')), purpose1 )
+                arr1 = aarzdriver.mypythonfunction( str(request.GET.get('locations')),float(request.GET.get('myminbox')),float(request.GET.get('mymaxbox')), purpose1 )
                 res1 = {'aarzhouse_records':arr1}
                 print(res1)
             return render(request,'home.html',context=res1)
