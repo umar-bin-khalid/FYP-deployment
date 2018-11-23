@@ -18,3 +18,4 @@ Incorporated Modules:
 
 3. Sale and Purchase of Properties
 
+4. Value Added Services
