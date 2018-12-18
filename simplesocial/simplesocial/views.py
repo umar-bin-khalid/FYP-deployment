@@ -30,7 +30,7 @@ def request_page(request):
             if(request.GET.get('mybtn')):
                 arr = driver.mypythonfunction( str(final),float(request.GET.get('myminbox')),float(request.GET.get('mymaxbox')), purpose )
                 res = {'house_records':arr}
-
+                print(res)
             return render(request,'home.html',context=res)
         except ConnectionError as e:
             # This is the correct syntax

@@ -6,7 +6,6 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django_userforeignkey.models.fields import UserForeignKey
 
-
 '''
 class User(auth.models.User, auth.models.PermissionsMixin):
 

@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 
 
 """
-This module parses listings on 'beta.zameen.com'.
+This module parses listings on 'zameen.com'.
 By 10 March 2018, it was tested on Lahore city on houses for sale and for rent.
 Please, see the following functions to understand how it works:
     __init__(self, ... )
@@ -23,7 +23,7 @@ class Zameen:
     purpose = 0
     page = 1
 
-    def __init__(self, location_link = 'https://beta.zameen.com/Homes/Lahore_Johar_Town-93-1.html',
+    def __init__(self, location_link = 'https://zameen.com/Homes/Lahore_Johar_Town-93-1.html',
                  price_min = 0,
                  price_max = 0,
                  purpose = 0,
